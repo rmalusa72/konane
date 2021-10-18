@@ -13,12 +13,23 @@ class GameState{
 	final static public char[] PLAYER_SYMBOL = {'X', 'O', '.'};
 	final static public int[] OPPOSITE_PLAYER = {PLAYER2, PLAYER1};
 	final int EMPTY = 2;
-	final int BOARD_SIZE = 8;
+	final static public int BOARD_SIZE = 8;
 	final int[] NORTH = {-2, 0};
 	final int[] EAST = {0, 2};
 	final int[] SOUTH = {2, 0};
 	final int[] WEST = {0, -2};
-	final boolean verbose = true; 
+	final int[][] DIRECTIONS = {NORTH, EAST, SOUTH, WEST};
+	final int NUM_DIRECTIONS = 4;
+	final boolean verbose = false; 
+
+	/* POSSIBLE TODO
+	- Maintain list of pieces of each side for faster move generation - unless that increases the memory requirements too much?
+	- Maintain piece count 
+	*/
+
+	/* FOR SURE TODO
+	Adapt printouts to increase coordinates by 1
+	*/
 
 	int[][] board;
 	int turn;
@@ -53,7 +64,63 @@ class GameState{
 
 	// Returns an arraylist containing all possible moves from this gamestate
 	public ArrayList<Move> getPossibleMoves(){
-		return null; 
+		ArrayList<Move> possibleMoves = new ArrayList<Move>();
+
+		// If we have not removed a piece yet, we must return a piece
+		if(!playersHaveRemoved[turn]){
+			// Iterate over our pieces 
+			for(int i=0; i<BOARD_SIZE; i++){
+				for(int j=0; j<BOARD_SIZE; j++){
+					if(board[i][j] == turn){
+						possibleMoves.add(new Move(new int[]{i,j}, turn));
+					}
+				}
+			}
+			return possibleMoves;
+		}
+
+		// Iterate over locations on board to find our pieces
+		for(int i=0; i<BOARD_SIZE; i++){
+			for(int j=0; j<BOARD_SIZE; j++){
+				// Our piece at i,j
+				if(board[i][j] == turn){
+					//Pick a direction
+					for(int k=0; k<NUM_DIRECTIONS; k++){
+						int[] direction = DIRECTIONS[k];
+
+						// Construct single-step move in that direction 
+						ArrayList<int[]> coordinates = new ArrayList<int[]>();
+						coordinates.add(new int[]{i,j});
+						int[] destination = applyDirection(new int[]{i,j}, direction);
+						// Make sure coordinates exist 
+						if (coordinatesExist(destination)){
+							coordinates.add(destination);
+							
+							// Is that move valid?
+							Move moveToTest = new Move(1, coordinates, turn);
+							int steps = 2;
+							while (isValid(moveToTest)){
+								// If move is valid, add it to the possible moves 
+								System.out.println(Arrays.toString(coordinates.get(0)) + " " + Arrays.toString(coordinates.get(1)));
+								possibleMoves.add(moveToTest);
+
+								// .. and construct a new move to test by taking another step in the same direction
+								destination = applyDirection(destination, direction);
+								if(!coordinatesExist(destination)){
+									break;
+								}
+								coordinates = (ArrayList<int[]>)coordinates.clone();
+								coordinates.add(destination);
+								moveToTest = new Move(steps, coordinates, turn);
+								steps++; 
+							}
+						}
+					}
+				}
+			}
+		}
+
+		return possibleMoves;  
 	}
 
 	// Determines whether a move is valid in the current gamestate
@@ -156,6 +223,20 @@ class GameState{
 		playersHaveRemoved = _removed;
 	}
 
+	public void setTurn(int _turn){
+		turn = _turn;
+	}
+
+	// STATIC UTILITY METHODS 
+
+	public static int[] applyDirection(int[] coordinates, int[] direction){
+		return new int[]{coordinates[0] + direction[0], coordinates[1] + direction[1]};
+	}
+
+	public static boolean coordinatesExist(int[] coordinates){
+		return (coordinates[0] >= 0 && coordinates[0] < BOARD_SIZE && coordinates[1] >= 0 && coordinates[1] < BOARD_SIZE);
+	}
+
 	// DEBUGGING 
 
 	// Generates a string representation of the board
@@ -175,15 +256,29 @@ class GameState{
 		
 		GameState g = new GameState();
 		System.out.println(g.displayBoard());
+		
+		//System.out.println(g.getPossibleMoves());
 
+		/*
 		int[] coordinates = new int[]{4,4};
 		
 		Move removalMove = new Move(coordinates, GameState.PLAYER1);
 		System.out.println(removalMove);
-		
+		*/
+
 		g.setBoard(initialBoard);
 		g.setRemoved(new boolean[]{true, true});
 		System.out.println(g.displayBoard());
+		System.out.println(g.getPossibleMoves());
+
+		g.setBoard(new int[][]{{0,1,0,1,0,1,0,1},{1,0,2,0,1,0,1,0},{0,1,0,1,0,1,0,1},{1,0,1,2,1,2,1,2},{0,1,0,1,0,1,0,1},{1,0,1,0,1,0,1,0},{0,1,0,1,0,1,0,1},{1,0,1,0,1,0,1,0}});
+		System.out.println(g.displayBoard());
+		System.out.println(g.getPossibleMoves());
+
+		g.setTurn(PLAYER2);
+		System.out.println(g.displayBoard());
+		System.out.println(g.getPossibleMoves());
+		/*
 
 		int[] startCoordinates = new int[]{5,3};
 		int[] destCoordinates = new int[]{3,3};
@@ -201,7 +296,7 @@ class GameState{
 		coords.set(1, altDestCoordinates);
 		Move diagonal = new Move(1, coords, GameState.PLAYER1);
 		System.out.println(g.isValid(diagonal));
-
+		*/ 
 		/*
 
 		Move removalMove2 = new Move(coordinates, GameState.PLAYER2);
