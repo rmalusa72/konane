@@ -1,6 +1,8 @@
 // Move.java
 // Represents one move 
 
+import java.util.ArrayList;
+
 class Move{
 
 	final int REMOVAL_STEPS=0;
@@ -9,22 +11,22 @@ class Move{
 
 	int steps; 			// The number of steps in the move (usually 1; 0 for a removal move)
 	int[] startCoordinates; // The initial coordinates of the piece we are moving 
-	int[][] nextCoordinates; // The coordinates to which we move (for a normal move, at least one set but possibly more. For a removal move, empty)
+	ArrayList<int[]> nextCoordinates; // The coordinates to which we move (for a normal move, at least one set but possibly more. For a removal move, empty)
 	int player; 
 
 	// Create a normal move 
-	public Move(int _steps, int[] _startCoordinates, int[][] _nextCoordinates, int _player){
+	public Move(int _steps, int[] _startCoordinates, ArrayList<int[]> _nextCoordinates, int _player){
 		if (_steps < 1){
 			throw new IllegalArgumentException("Normal move must take at least one step");
 		}
 		if (_startCoordinates.length != 2){
 			throw new IllegalArgumentException("Start coordinates should be one x and one y coordinate");
 		}
-		if (_nextCoordinates.length != _steps){
+		if (_nextCoordinates.size() != _steps){
 			throw new IllegalArgumentException("Number of steps must match number of coordinates");
 		}
-		for(int i=0; i<_nextCoordinates.length; i++){
-			if(_nextCoordinates[i].length != 2){
+		for(int i=0; i<_nextCoordinates.size(); i++){
+			if(_nextCoordinates.get(i).length != 2){
 				throw new IllegalArgumentException("Each coordinate must have an x and y component");
 			}
 		}
@@ -63,7 +65,7 @@ class Move{
 			returnString += "<" + Integer.toString(startCoordinates[ROW]) + "," + Integer.toString(startCoordinates[COL]) + "> ";
 			for (int i=0; i<steps; i++){
 				returnString += "to ";
-				returnString += "<" + Integer.toString(nextCoordinates[i][ROW]) + "," + Integer.toString(nextCoordinates[i][COL]) + "> ";
+				returnString += "<" + Integer.toString(nextCoordinates.get(i)[ROW]) + "," + Integer.toString(nextCoordinates.get(i)[COL]) + "> ";
 			}
 		}
 		return returnString;
@@ -80,12 +82,15 @@ class Move{
 		System.out.println(removalMove2);
 
 		int[] otherCoordinates = new int[]{4,6};
-		int[][] moves = new int[][]{otherCoordinates};
+		ArrayList<int[]> moves = new ArrayList<int[]>(1);
+		moves.add(otherCoordinates);
 		Move normalMove = new Move(1, coordinates, moves, GameState.PLAYER1);
 		System.out.println(normalMove);
 
 		int[] otherOtherCoordinates = new int[]{4,8};
-		int[][] longMoves = new int[][]{otherCoordinates, otherOtherCoordinates};
+		ArrayList<int[]> longMoves = new ArrayList<int[]>(2);
+		longMoves.add(otherCoordinates);
+		longMoves.add(otherOtherCoordinates);
 		Move longMove = new Move(2, coordinates, longMoves, GameState.PLAYER2);
 		System.out.println(longMove);
 

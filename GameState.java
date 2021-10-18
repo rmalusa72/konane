@@ -49,8 +49,6 @@ class GameState{
 		return returnString;
 	}
 
-	public 
-
 	public static void main(String[] args){
 		
 		GameState g = new GameState();
