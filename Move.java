@@ -10,23 +10,21 @@ class Move{
 	final int COL = 1;
 
 	int steps; 			// The number of steps in the move (usually 1; 0 for a removal move)
-	int[] startCoordinates; // The initial coordinates of the piece we are moving 
-	ArrayList<int[]> nextCoordinates; // The coordinates to which we move (for a normal move, at least one set but possibly more. For a removal move, empty)
+	ArrayList<int[]> coordinates; // The coordinates at which we start & then those to which we move (for a normal move, at least one set but possibly more. For a removal move, empty)
 	int player; 
 
+	// CONSTRUCTORS 
+
 	// Create a normal move 
-	public Move(int _steps, int[] _startCoordinates, ArrayList<int[]> _nextCoordinates, int _player){
+	public Move(int _steps, ArrayList<int[]> _coordinates, int _player){
 		if (_steps < 1){
 			throw new IllegalArgumentException("Normal move must take at least one step");
 		}
-		if (_startCoordinates.length != 2){
-			throw new IllegalArgumentException("Start coordinates should be one x and one y coordinate");
-		}
-		if (_nextCoordinates.size() != _steps){
+		if (_coordinates.size() != _steps+1){
 			throw new IllegalArgumentException("Number of steps must match number of coordinates");
 		}
-		for(int i=0; i<_nextCoordinates.size(); i++){
-			if(_nextCoordinates.get(i).length != 2){
+		for(int i=0; i<_coordinates.size(); i++){
+			if(_coordinates.get(i).length != 2){
 				throw new IllegalArgumentException("Each coordinate must have an x and y component");
 			}
 		}
@@ -34,8 +32,7 @@ class Move{
 			throw new IllegalArgumentException("Player must be a valid player");
 		}
 		steps = _steps;
-		startCoordinates = _startCoordinates;
-		nextCoordinates = _nextCoordinates;
+		coordinates = _coordinates;
 		player = _player;
 	}
 
@@ -48,25 +45,53 @@ class Move{
 			throw new IllegalArgumentException("Player must be a valid player");
 		}
 		steps = 0;
-		startCoordinates = removalCoordinates;
-		nextCoordinates = null; 
+		coordinates = new ArrayList<int[]>(1);
+		coordinates.add(removalCoordinates);
 		player = _player;
 	}
 
+	// ACCESSORS 
+	public int steps(){
+		return steps;
+	}
+
+	public int startRow(){
+		return coordinates.get(0)[ROW];
+	}
+
+	public int startCol(){
+		return coordinates.get(0)[COL];
+	}
+
+	public ArrayList<int[]> coordinates(){
+		return coordinates;
+	}
+
+	public int[] nthStep(int n){
+		return coordinates.get(n);
+	}
+
+	public int player(){
+		return player; 
+	}
+
+	public boolean isRemoval(){
+		return steps==REMOVAL_STEPS;
+	}
+
+	// DEBUGGING ETC 
 	public String toString(){
 		String returnString = GameState.PLAYER_SYMBOL[player] + " ";
 		if (steps==REMOVAL_STEPS){
 			// A removal move.
 			returnString += "removes ";
-			returnString += "<" + Integer.toString(startCoordinates[ROW]) + "," + Integer.toString(startCoordinates[COL]) + ">";
 		} else {
 			// A normal move. 
 			returnString += "moves ";
-			returnString += "<" + Integer.toString(startCoordinates[ROW]) + "," + Integer.toString(startCoordinates[COL]) + "> ";
-			for (int i=0; i<steps; i++){
-				returnString += "to ";
-				returnString += "<" + Integer.toString(nextCoordinates.get(i)[ROW]) + "," + Integer.toString(nextCoordinates.get(i)[COL]) + "> ";
-			}
+		}
+		for (int i=0; i<steps+1; i++){
+			returnString += "to ";
+			returnString += "<" + Integer.toString(coordinates.get(i)[ROW]) + "," + Integer.toString(coordinates.get(i)[COL]) + "> ";
 		}
 		return returnString;
 	}
@@ -83,19 +108,20 @@ class Move{
 
 		int[] otherCoordinates = new int[]{4,6};
 		ArrayList<int[]> moves = new ArrayList<int[]>(1);
+		moves.add(coordinates);
 		moves.add(otherCoordinates);
-		Move normalMove = new Move(1, coordinates, moves, GameState.PLAYER1);
+		Move normalMove = new Move(1, moves, GameState.PLAYER1);
 		System.out.println(normalMove);
 
 		int[] otherOtherCoordinates = new int[]{4,8};
 		ArrayList<int[]> longMoves = new ArrayList<int[]>(2);
+		longMoves.add(coordinates);
 		longMoves.add(otherCoordinates);
 		longMoves.add(otherOtherCoordinates);
-		Move longMove = new Move(2, coordinates, longMoves, GameState.PLAYER2);
+		Move longMove = new Move(2, longMoves, GameState.PLAYER2);
 		System.out.println(longMove);
 
 		return;
-		//Move m = Move()
 	}
 
 }
