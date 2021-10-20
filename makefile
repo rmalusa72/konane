@@ -9,7 +9,8 @@ CLASSES = \
 		Move.java \
 		Konane.java \
 		Agent.java \
-		HumanAgent.java
+		HumanAgent.java \
+		RandomAgent.java
 
 default: classes
 

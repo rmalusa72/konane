@@ -16,6 +16,7 @@ public class RandomAgent implements Agent{
 	public Move getMove(GameState g, Move lastMove){
 		ArrayList<Move> possibleMoves = g.getPossibleMoves();
 		int randomChoice = r.nextInt(possibleMoves.size());
+		System.out.println(possibleMoves.get(randomChoice));
 		return possibleMoves.get(randomChoice);
 	}
 }

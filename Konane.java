@@ -7,7 +7,7 @@ class Konane{
 	Agent player2; 
 	Agent[] players;
 
-	public Server(Agent _p1, Agent _p2){
+	public Konane(Agent _p1, Agent _p2){
 		
 		// Setup players and game state 
 		player1 = _p1;
@@ -41,11 +41,15 @@ class Konane{
 	}
 
 	public static void humanGame(){
-		Server s = new Server(new HumanAgent(GameState.PLAYER1), new HumanAgent(GameState.PLAYER2));
+		Konane s = new Konane(new HumanAgent(GameState.PLAYER1), new HumanAgent(GameState.PLAYER2));
+	}
+
+	public static void randomGame(){
+		Konane s = new Konane(new RandomAgent(GameState.PLAYER1), new RandomAgent(GameState.PLAYER2));
 	}
 
 	public static void main(String[] args){
-		humanGame();
+		randomGame();
 	}
 
 }
