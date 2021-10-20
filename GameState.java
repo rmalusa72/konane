@@ -242,27 +242,36 @@ class GameState{
 
 		// make a copy
 		GameState result = new GameState(this);
+		result.applyMoveInPlace(m);
 
+		return result;
+	}
+
+	// If the move m is valid, apply it to the current gamestate (without generating a new one)
+	// and return true. Otherwise return false 
+	public boolean applyMoveInPlace(Move m){
+		if(!isValid(m)){
+			return false;
+		}
 		// If it is a removal, remove piece & update playersHaveRemoved 
 		if(m.isRemoval()){
-			result.board[m.startRow()][m.startCol()] = EMPTY;
-			result.playersHaveRemoved[turn] = true;
+			board[m.startRow()][m.startCol()] = EMPTY;
+			playersHaveRemoved[turn] = true;
 		} else {
 			// If it is a move(s), move jumping piece
-			result.board[m.startRow()][m.startCol()] = EMPTY;
-			result.board[m.endRow()][m.endCol()] = turn; 
+			board[m.startRow()][m.startCol()] = EMPTY;
+			board[m.endRow()][m.endCol()] = turn; 
 
 			// And remove jumped-over pieces
 			ArrayList<int[]> jumpedOver = m.jumpedOver();
 			for(int i=0; i<jumpedOver.size(); i++){
-				result.board[jumpedOver.get(i)[0]][jumpedOver.get(i)[1]] = EMPTY;
+				board[jumpedOver.get(i)[0]][jumpedOver.get(i)[1]] = EMPTY;
 			}
 		}
-
 		// Change turn 
-		result.turn = OPPOSITE_PLAYER[result.turn];
+		turn = OPPOSITE_PLAYER[turn];
 
-		return result;
+		return true; 
 	}
 
 	// Static utility function: 
@@ -306,7 +315,8 @@ class GameState{
 		GameState currentState = g;
 		while (!currentState.isTerminal()){
 			System.out.println(currentState.getPossibleMoves());
-			currentState = currentState.applyMove(currentState.getPossibleMoves().get(0));
+			currentState.applyMoveInPlace(currentState.getPossibleMoves().get(0));
+			//currentState = currentState.applyMove(currentState.getPossibleMoves().get(0));
 			System.out.println(currentState.toString());
 		}
 		return;
