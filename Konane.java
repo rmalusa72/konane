@@ -48,8 +48,17 @@ class Konane{
 		Konane s = new Konane(new RandomAgent(GameState.PLAYER1), new RandomAgent(GameState.PLAYER2));
 	}
 
+	public static void humanVsRandom(boolean computerIsX){
+		if(computerIsX){
+			Konane s = new Konane(new RandomAgent(GameState.PLAYER1), new HumanAgent(GameState.PLAYER2));
+		} else {
+			Konane s = new Konane(new HumanAgent(GameState.PLAYER1), new RandomAgent(GameState.PLAYER2));
+		}
+		
+	}
+
 	public static void main(String[] args){
-		randomGame();
+		humanVsRandom(true);
 	}
 
 }
