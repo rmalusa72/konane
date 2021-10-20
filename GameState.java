@@ -309,6 +309,18 @@ class GameState{
 		return count;
 	}
 
+	public int numMoves(int player){
+		if(player==turn){
+			return getPossibleMoves().size();
+		} else {
+			turn = OPPOSITE_PLAYER[turn];
+			int numOppositeMoves = getPossibleMoves().size();
+			turn = OPPOSITE_PLAYER[turn];
+			return numOppositeMoves;
+		}
+	}
+
+
 	// Generates a string representation of the board
 	public String displayBoard(){
 		String returnString = "\t1 2 3 4 5 6 7 8\n\n";

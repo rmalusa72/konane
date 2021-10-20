@@ -6,6 +6,7 @@ import java.util.Random;
 
 // POSSIBLE TODO LATER:
 // Save some information while searching 
+// Evaluate performance against random agent
 
 public class MinimaxAgent implements Agent{
 	int player;
@@ -13,7 +14,7 @@ public class MinimaxAgent implements Agent{
 
 	public MinimaxAgent(int _player){
 		player=_player;
-		depthLimit=1;
+		depthLimit=5;
 	}
 
 	// Find and return minimax-recommended move 
@@ -85,7 +86,9 @@ public class MinimaxAgent implements Agent{
 
 	// Static evaluation function 
 	private int e(GameState g){
-		return g.numPieces(player);
+		//return g.numPieces(player);
+		//return g.numMoves(player);
+		return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
 	}
 
 	private boolean isMax(GameState g){
