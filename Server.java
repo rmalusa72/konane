@@ -5,13 +5,14 @@ class Server{
 
 	Agent player1;
 	Agent player2; 
-	Agent[] players = {player1, player2};
+	Agent[] players;
 
 	public Server(Agent _p1, Agent _p2){
 		
 		// Setup players and game state 
 		player1 = _p1;
 		player2 = _p2;
+		players = new Agent[]{player1, player2};
 
 		GameState g = new GameState();
 		Move lastMove = null;
@@ -37,6 +38,10 @@ class Server{
 		System.out.println(GameState.PLAYER_SYMBOL[g.winner()] + " has won!");
 
 		return;
+	}
+
+	public static void main(String[] args){
+		Server s = new Server(new HumanAgent(GameState.PLAYER1), new HumanAgent(GameState.PLAYER2));
 	}
 
 }

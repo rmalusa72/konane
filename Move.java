@@ -18,9 +18,6 @@ class Move{
 
 	// Create a normal move 
 	public Move(int _steps, ArrayList<int[]> _coordinates, int _player){
-		if (_steps < 1){
-			throw new IllegalArgumentException("Normal move must take at least one step");
-		}
 		if (_coordinates.size() != _steps+1){
 			throw new IllegalArgumentException("Number of steps must match number of coordinates");
 		}

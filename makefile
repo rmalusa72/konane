@@ -8,7 +8,8 @@ CLASSES = \
 		GameState.java \
 		Move.java \
 		Server.java \
-		Agent.java
+		Agent.java \
+		HumanAgent.java
 
 default: classes
 
