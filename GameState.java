@@ -297,6 +297,18 @@ class GameState{
 		return turn;
 	}
 
+	public int numPieces(int player){
+		int count = 0;
+		for(int i=0; i<BOARD_SIZE; i++){
+			for(int j=0; j<BOARD_SIZE; j++){
+				if(board[i][j] == player){
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
 	// Generates a string representation of the board
 	public String displayBoard(){
 		String returnString = "\t1 2 3 4 5 6 7 8\n\n";

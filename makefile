@@ -10,7 +10,8 @@ CLASSES = \
 		Konane.java \
 		Agent.java \
 		HumanAgent.java \
-		RandomAgent.java
+		RandomAgent.java \
+		MinimaxAgent.java
 
 default: classes
 

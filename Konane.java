@@ -58,7 +58,7 @@ class Konane{
 	}
 
 	public static void main(String[] args){
-		humanVsRandom(true);
+		Konane s = new Konane(new RandomAgent(GameState.PLAYER1), new MinimaxAgent(GameState.PLAYER2));
 	}
 
 }
