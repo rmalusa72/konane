@@ -58,7 +58,7 @@ class Konane{
 	}
 
 	public static void main(String[] args){
-		Konane s = new Konane(new RandomAgent(GameState.PLAYER1), new MinimaxAgent(GameState.PLAYER2));
+		Konane s = new Konane(new RandomAgent(GameState.PLAYER1), new ABMinimaxAgent(GameState.PLAYER2));
 	}
 
 }

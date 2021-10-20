@@ -11,7 +11,8 @@ CLASSES = \
 		Agent.java \
 		HumanAgent.java \
 		RandomAgent.java \
-		MinimaxAgent.java
+		MinimaxAgent.java \
+		ABMinimaxAgent.java
 
 default: classes
 
