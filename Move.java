@@ -2,6 +2,7 @@
 // Represents one move 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class Move{
 
@@ -9,8 +10,8 @@ class Move{
 	final int ROW = 0;
 	final int COL = 1;
 
-	int steps; 			// The number of steps in the move (usually 1; 0 for a removal move)
-	ArrayList<int[]> coordinates; // The coordinates at which we start & then those to which we move (for a normal move, at least one set but possibly more. For a removal move, empty)
+	int steps; 	// The number of steps in the move (0 for a removal move)
+	ArrayList<int[]> coordinates; // The coordinates of the starting piece and each successive location
 	int player; 
 
 	// CONSTRUCTORS 
@@ -63,8 +64,28 @@ class Move{
 		return coordinates.get(0)[COL];
 	}
 
+	public int[] startCoordinates(){
+		return coordinates.get(0);
+	}
+
+	public int endRow(){
+		return coordinates.get(steps)[ROW];
+	}
+
+	public int endCol(){
+		return coordinates.get(steps)[COL];
+	}
+
 	public ArrayList<int[]> coordinates(){
 		return coordinates;
+	}
+
+	public ArrayList<int[]> jumpedOver(){
+		ArrayList<int[]> jumpedOverCoordinates = new ArrayList<int[]>(8);
+		for(int i=1; i<steps+1; i++){
+			jumpedOverCoordinates.add(new int[]{(coordinates.get(i)[0] + coordinates.get(i-1)[0])/2, (coordinates.get(i)[1] + coordinates.get(i-1)[1])/2});
+		}
+		return jumpedOverCoordinates;
 	}
 
 	public int[] nthStep(int n){
@@ -79,7 +100,7 @@ class Move{
 		return steps==REMOVAL_STEPS;
 	}
 
-	// DEBUGGING ETC 
+	// Returns a string representation 
 	public String toString(){
 		String returnString = GameState.PLAYER_SYMBOL[player] + " ";
 		if (steps==REMOVAL_STEPS){
@@ -90,21 +111,30 @@ class Move{
 			returnString += "moves ";
 		}
 		for (int i=0; i<steps+1; i++){
-			returnString += "to ";
-			returnString += "<" + Integer.toString(coordinates.get(i)[ROW]) + "," + Integer.toString(coordinates.get(i)[COL]) + "> ";
+			if(i==0){
+				returnString += "from ";
+			} else {
+				returnString += "to ";
+			}
+			returnString += "<" + Integer.toString(coordinates.get(i)[ROW]) + "," 
+				+ Integer.toString(coordinates.get(i)[COL]) + "> ";
 		}
 		return returnString;
 	}
 
-	// Testing move constructors 
+	// Testing if run as main class
 	public static void main(String[] args){
 		int[] coordinates = new int[]{4,4};
 		
 		Move removalMove = new Move(coordinates, GameState.PLAYER1);
 		System.out.println(removalMove);
+		System.out.println("Jumped over ");
+		System.out.println(removalMove.jumpedOver());
 		
 		Move removalMove2 = new Move(coordinates, GameState.PLAYER2);
 		System.out.println(removalMove2);
+		System.out.println("Jumped over ");
+		System.out.println(removalMove2.jumpedOver());
 
 		int[] otherCoordinates = new int[]{4,6};
 		ArrayList<int[]> moves = new ArrayList<int[]>(1);
@@ -112,6 +142,8 @@ class Move{
 		moves.add(otherCoordinates);
 		Move normalMove = new Move(1, moves, GameState.PLAYER1);
 		System.out.println(normalMove);
+		System.out.println("Jumped over ");
+		System.out.println(Arrays.toString(normalMove.jumpedOver().get(0)));
 
 		int[] otherOtherCoordinates = new int[]{4,8};
 		ArrayList<int[]> longMoves = new ArrayList<int[]>(2);
@@ -120,6 +152,9 @@ class Move{
 		longMoves.add(otherOtherCoordinates);
 		Move longMove = new Move(2, longMoves, GameState.PLAYER2);
 		System.out.println(longMove);
+		System.out.println("Jumped over ");
+		System.out.println(Arrays.toString(longMove.jumpedOver().get(0)));
+		System.out.println(Arrays.toString(longMove.jumpedOver().get(1)));
 
 		return;
 	}

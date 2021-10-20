@@ -6,20 +6,22 @@ import java.util.Arrays;
 
 class GameState{
 
-	final static public int[][] initialBoard = {{0,1,0,1,0,1,0,1},{1,0,1,0,1,0,1,0},{0,1,0,1,0,1,0,1},{1,0,1,2,2,0,1,0},{0,1,0,1,0,1,0,1},{1,0,1,0,1,0,1,0},{0,1,0,1,0,1,0,1},{1,0,1,0,1,0,1,0}};
-
 	final static public int PLAYER1 = 0;
 	final static public int PLAYER2 = 1;
+	final int EMPTY = 2;
+
 	final static public char[] PLAYER_SYMBOL = {'X', 'O', '.'};
 	final static public int[] OPPOSITE_PLAYER = {PLAYER2, PLAYER1};
-	final int EMPTY = 2;
+	
 	final static public int BOARD_SIZE = 8;
+
 	final int[] NORTH = {-2, 0};
 	final int[] EAST = {0, 2};
 	final int[] SOUTH = {2, 0};
 	final int[] WEST = {0, -2};
 	final int[][] DIRECTIONS = {NORTH, EAST, SOUTH, WEST};
 	final int NUM_DIRECTIONS = 4;
+
 	final boolean verbose = false; 
 
 	/* POSSIBLE TODO
@@ -35,8 +37,6 @@ class GameState{
 	int turn;
 	boolean[] playersHaveRemoved; 
 
-	// SETUP 
-
 	// A constructor that generates an initial game state 
 	public GameState(){
 		board = setupInitialBoard();
@@ -44,6 +44,21 @@ class GameState{
 		playersHaveRemoved = new boolean[2];
 		playersHaveRemoved[PLAYER1] = false;
 		playersHaveRemoved[PLAYER2] = false;
+		return;
+	}
+
+	// A constructor that generates a deep copy of the provided game state 
+	private GameState(GameState copied){
+		board = new int[BOARD_SIZE][BOARD_SIZE];
+		for(int i=0; i<BOARD_SIZE; i++){
+			for(int j=0; j<BOARD_SIZE; j++){
+				board[i][j] = copied.board[i][j];
+			}
+		}
+		turn = copied.turn;
+		playersHaveRemoved = new boolean[2];
+		playersHaveRemoved[PLAYER1] = copied.playersHaveRemoved[PLAYER1];
+		playersHaveRemoved[PLAYER2] = copied.playersHaveRemoved[PLAYER2];
 		return;
 	}
 
@@ -56,17 +71,19 @@ class GameState{
 				board[i][j] = parity;
 			}
 		}
-
 		return board; 
 	}
 
-	// CORE METHODS 
+	// Returns true if the current player cannot make a move 
+	public boolean isTerminal(){
+		return getPossibleMoves().size() == 0;
+	}
 
 	// Returns an arraylist containing all possible moves from this gamestate
 	public ArrayList<Move> getPossibleMoves(){
 		ArrayList<Move> possibleMoves = new ArrayList<Move>();
 
-		// If we have not removed a piece yet, we must return a piece
+		// If we have not removed a piece yet, we must remove a piece
 		if(!playersHaveRemoved[turn]){
 			// Iterate over our pieces 
 			for(int i=0; i<BOARD_SIZE; i++){
@@ -101,7 +118,6 @@ class GameState{
 							int steps = 2;
 							while (isValid(moveToTest)){
 								// If move is valid, add it to the possible moves 
-								System.out.println(Arrays.toString(coordinates.get(0)) + " " + Arrays.toString(coordinates.get(1)));
 								possibleMoves.add(moveToTest);
 
 								// .. and construct a new move to test by taking another step in the same direction
@@ -119,11 +135,10 @@ class GameState{
 				}
 			}
 		}
-
 		return possibleMoves;  
 	}
 
-	// Determines whether a move is valid in the current gamestate
+	// Returns true if the move m can be made in the current gamestate 
 	public boolean isValid(Move m){
 		// Player must match current turn
 		if (m.player() != turn){
@@ -139,8 +154,14 @@ class GameState{
 			}			
 			return false; 
 		}
+		if(playersHaveRemoved[turn] && m.isRemoval()){
+			if(verbose){
+				System.out.println("Move rejected: player cannot remove multiple pieces");
+			}			
+			return false; 			
+		}
 		// Initial coordinates must be on board 
-		if (m.startRow() < 0 || m.startRow() >= BOARD_SIZE || m.startCol() < 0 || m.startCol() >= BOARD_SIZE){
+		if (!coordinatesExist(m.startCoordinates())){
 			if(verbose){
 				System.out.println("Move rejected: initial coordinates are off board");
 			}			
@@ -173,7 +194,7 @@ class GameState{
 		for(int i=1; i<m.steps()+1; i++){
 			int[] ithCoordinate = m.nthStep(i);
 			// they must be on the board
-			if (ithCoordinate[0] < 0 || ithCoordinate[0] >= BOARD_SIZE || ithCoordinate[1] < 0 || ithCoordinate[1] >= BOARD_SIZE){
+			if (!coordinatesExist(ithCoordinate)){
 				if(verbose){
 					System.out.println("Move rejected: " + Integer.toString(i) + "th step is off the board");
 				}		
@@ -209,35 +230,52 @@ class GameState{
 				return false; 
 			}
 		}
-
 		return true;
 	}
 
-	// ACCESSORS AND MODIFIERS 
+	// If the move m is valid, return a gamestate representing the result of applying that move to this state
+	// Otherwise return null 
+	public GameState applyMove(Move m){
+		if(!isValid(m)){
+			return null; 
+		}
 
-	public void setBoard(int[][] _board){
-		board = _board;
+		// make a copy
+		GameState result = new GameState(this);
+
+		// If it is a removal, remove piece & update playersHaveRemoved 
+		if(m.isRemoval()){
+			result.board[m.startRow()][m.startCol()] = EMPTY;
+			result.playersHaveRemoved[turn] = true;
+		} else {
+			// If it is a move(s), move jumping piece
+			result.board[m.startRow()][m.startCol()] = EMPTY;
+			result.board[m.endRow()][m.endCol()] = turn; 
+
+			// And remove jumped-over pieces
+			ArrayList<int[]> jumpedOver = m.jumpedOver();
+			for(int i=0; i<jumpedOver.size(); i++){
+				result.board[jumpedOver.get(i)[0]][jumpedOver.get(i)[1]] = EMPTY;
+			}
+		}
+
+		// Change turn 
+		result.turn = OPPOSITE_PLAYER[result.turn];
+
+		return result;
 	}
 
-	public void setRemoved(boolean[] _removed){
-		playersHaveRemoved = _removed;
-	}
-
-	public void setTurn(int _turn){
-		turn = _turn;
-	}
-
-	// STATIC UTILITY METHODS 
-
+	// Static utility function: 
+	// Returns the result of applying one step in the provided direction to the provided coordinates 
 	public static int[] applyDirection(int[] coordinates, int[] direction){
 		return new int[]{coordinates[0] + direction[0], coordinates[1] + direction[1]};
 	}
 
+	// Static utility function: 
+	// Returns true if coordinates are within the board 
 	public static boolean coordinatesExist(int[] coordinates){
 		return (coordinates[0] >= 0 && coordinates[0] < BOARD_SIZE && coordinates[1] >= 0 && coordinates[1] < BOARD_SIZE);
 	}
-
-	// DEBUGGING 
 
 	// Generates a string representation of the board
 	public String displayBoard(){
@@ -252,81 +290,25 @@ class GameState{
 		return returnString;
 	}
 
+	// Generates a string representation of the game state 
+	public String toString(){
+		String returnString = "";
+		returnString += "Turn: " + PLAYER_SYMBOL[turn] + "\n";
+		returnString += displayBoard();
+		return returnString;
+	}
+
 	public static void main(String[] args){
 		
 		GameState g = new GameState();
-		System.out.println(g.displayBoard());
-		
-		//System.out.println(g.getPossibleMoves());
+		System.out.println(g.toString());
 
-		/*
-		int[] coordinates = new int[]{4,4};
-		
-		Move removalMove = new Move(coordinates, GameState.PLAYER1);
-		System.out.println(removalMove);
-		*/
-
-		g.setBoard(initialBoard);
-		g.setRemoved(new boolean[]{true, true});
-		System.out.println(g.displayBoard());
-		System.out.println(g.getPossibleMoves());
-
-		g.setBoard(new int[][]{{0,1,0,1,0,1,0,1},{1,0,2,0,1,0,1,0},{0,1,0,1,0,1,0,1},{1,0,1,2,1,2,1,2},{0,1,0,1,0,1,0,1},{1,0,1,0,1,0,1,0},{0,1,0,1,0,1,0,1},{1,0,1,0,1,0,1,0}});
-		System.out.println(g.displayBoard());
-		System.out.println(g.getPossibleMoves());
-
-		g.setTurn(PLAYER2);
-		System.out.println(g.displayBoard());
-		System.out.println(g.getPossibleMoves());
-		/*
-
-		int[] startCoordinates = new int[]{5,3};
-		int[] destCoordinates = new int[]{3,3};
-		ArrayList<int[]> coords = new ArrayList<int[]>(2);
-		coords.add(startCoordinates);
-		coords.add(destCoordinates);
-		Move normalMove = new Move(1, coords, GameState.PLAYER1);
-
-		System.out.println(g.isValid(normalMove));
-
-		Move wrongPlayer = new Move(1, coords, GameState.PLAYER2);
-		System.out.println(g.isValid(wrongPlayer));
-
-		int[] altDestCoordinates = new int[]{4,4};
-		coords.set(1, altDestCoordinates);
-		Move diagonal = new Move(1, coords, GameState.PLAYER1);
-		System.out.println(g.isValid(diagonal));
-		*/ 
-		/*
-
-		Move removalMove2 = new Move(coordinates, GameState.PLAYER2);
-		System.out.println(removalMove2);
-
-		int[] otherCoordinates = new int[]{4,6};
-		ArrayList<int[]> moves = new ArrayList<int[]>(1);
-		moves.add(coordinates);
-		moves.add(otherCoordinates);
-		Move normalMove = new Move(1, moves, GameState.PLAYER1);
-		System.out.println(normalMove);
-
-		int[] otherOtherCoordinates = new int[]{4,8};
-		ArrayList<int[]> longMoves = new ArrayList<int[]>(2);
-		longMoves.add(coordinates);
-		longMoves.add(otherCoordinates);
-		longMoves.add(otherOtherCoordinates);
-		Move longMove = new Move(2, longMoves, GameState.PLAYER2);
-		System.out.println(longMove);
-
-		System.out.println(g.isValid(removalMove));
-		System.out.println(g.isValid(removalMove2));
-		System.out.println(g.isValid(normalMove));
-		System.out.println(g.isValid(longMove));
-
-		*/ 
-
+		GameState currentState = g;
+		while (!currentState.isTerminal()){
+			System.out.println(currentState.getPossibleMoves());
+			currentState = currentState.applyMove(currentState.getPossibleMoves().get(0));
+			System.out.println(currentState.toString());
+		}
 		return;
 	}
-
-
-
 }
