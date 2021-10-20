@@ -1,7 +1,7 @@
 // Server.java
 // Sets up the board and two agents and facilitates play 
 
-class Server{
+class Konane{
 
 	Agent player1;
 	Agent player2; 
@@ -40,8 +40,12 @@ class Server{
 		return;
 	}
 
-	public static void main(String[] args){
+	public static void humanGame(){
 		Server s = new Server(new HumanAgent(GameState.PLAYER1), new HumanAgent(GameState.PLAYER2));
+	}
+
+	public static void main(String[] args){
+		humanGame();
 	}
 
 }

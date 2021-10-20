@@ -7,7 +7,7 @@ JC = javac
 CLASSES = \
 		GameState.java \
 		Move.java \
-		Server.java \
+		Konane.java \
 		Agent.java \
 		HumanAgent.java
 
