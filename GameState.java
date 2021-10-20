@@ -293,6 +293,10 @@ class GameState{
 		return (coordinates[0] >= 0 && coordinates[0] < BOARD_SIZE && coordinates[1] >= 0 && coordinates[1] < BOARD_SIZE);
 	}
 
+	public int turn(){
+		return turn;
+	}
+
 	// Generates a string representation of the board
 	public String displayBoard(){
 		String returnString = "\t1 2 3 4 5 6 7 8\n\n";

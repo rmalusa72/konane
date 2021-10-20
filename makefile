@@ -6,7 +6,9 @@ JC = javac
 
 CLASSES = \
 		GameState.java \
-		Move.java
+		Move.java \
+		Server.java \
+		Agent.java
 
 default: classes
 
