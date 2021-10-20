@@ -116,8 +116,8 @@ class Move{
 			} else {
 				returnString += "to ";
 			}
-			returnString += "<" + Integer.toString(coordinates.get(i)[ROW]) + "," 
-				+ Integer.toString(coordinates.get(i)[COL]) + "> ";
+			returnString += "<" + Integer.toString(coordinates.get(i)[ROW]+1) + "," 
+				+ Integer.toString(coordinates.get(i)[COL]+1) + "> ";
 		}
 		return returnString;
 	}

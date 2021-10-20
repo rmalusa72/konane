@@ -79,6 +79,13 @@ class GameState{
 		return getPossibleMoves().size() == 0;
 	}
 
+	public int winner(){
+		if(isTerminal()){
+			return OPPOSITE_PLAYER[turn];
+		}
+		return EMPTY; 
+	}
+
 	// Returns an arraylist containing all possible moves from this gamestate
 	public ArrayList<Move> getPossibleMoves(){
 		ArrayList<Move> possibleMoves = new ArrayList<Move>();
@@ -319,6 +326,7 @@ class GameState{
 			//currentState = currentState.applyMove(currentState.getPossibleMoves().get(0));
 			System.out.println(currentState.toString());
 		}
+		System.out.println("Winner: " + PLAYER_SYMBOL[currentState.winner()]);
 		return;
 	}
 }
