@@ -25,7 +25,8 @@ class GameState{
 	final boolean verbose = false; 
 
 	/* POSSIBLE TODO
-	- Maintain list of pieces of each side for faster move generation - unless that increases the memory requirements too much?
+	- Maintain list of pieces of each side for faster move generation
+	- Maybe even maintain list of moves 
 	- Maintain piece count 
 	*/
 

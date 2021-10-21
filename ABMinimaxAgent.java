@@ -7,14 +7,24 @@ import java.util.Random;
 // POSSIBLE TODO LATER:
 // Save some information while searching 
 // Evaluate performance against random agent
+// Iterative deepening 
 
 public class ABMinimaxAgent implements Agent{
 	int player;
 	int depthLimit;
+	int strategy;
+	public static final int NUMPIECES = 0;
+	public static final int NUMMOVES = 1;
+	public static final int DIFFERENCEMOVES = 2; 
 
-	public ABMinimaxAgent(int _player){
+	public ABMinimaxAgent(int _player, int _strategy){
 		player=_player;
 		depthLimit=6;
+		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES))){
+			throw new IllegalArgumentException("Invalid strategy");
+		}
+		strategy = _strategy;
+
 	}
 
 	// Find and return minimax-recommended move 
@@ -28,9 +38,9 @@ public class ABMinimaxAgent implements Agent{
 		for(int i=0; i<successors.size(); i++){
 			// Get gamestate resulting from each 
 			Move move = successors.get(i);
-			System.out.println(move);
+			//System.out.println(move);
 			GameState result = g.applyMove(move);
-			System.out.println(result);
+			//System.out.println(result);
 
 			//Apply minimax to each to determine expected value 
 			int value = minValue(result, 1, depthLimit, Integer.MIN_VALUE, Integer.MAX_VALUE);
@@ -142,14 +152,20 @@ public class ABMinimaxAgent implements Agent{
 	private int e(GameState g){
 		if(g.isTerminal()){
 			if(g.winner() == player){
-				return Integer.MAX_VALUE;
+				return Integer.MAX_VALUE-1;
 			} else {
-				return Integer.MIN_VALUE;
+				return Integer.MIN_VALUE+1;
 			}
 		}
-		//return g.numPieces(player);
-		//return g.numMoves(player);
-		return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
+
+		if(strategy == NUMPIECES){
+			return g.numPieces(player);
+		} else if(strategy == NUMMOVES){
+			return g.numMoves(player);
+		} else if(strategy == DIFFERENCEMOVES){
+			return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
+		}
+		return 0;
 	}
 
 	private boolean isMax(GameState g){

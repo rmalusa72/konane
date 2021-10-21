@@ -6,6 +6,7 @@ class Konane{
 	Agent player1;
 	Agent player2; 
 	Agent[] players;
+	public static final boolean printGames = false;
 
 	public Konane(Agent _p1, Agent _p2){
 		
@@ -20,7 +21,10 @@ class Konane{
 		// Continue alternating turns until game is completed 
 		while(!g.isTerminal()){
 
-			System.out.println(g);
+			if(printGames){
+				System.out.println(g);	
+			}
+			
 
 			Agent currentPlayer = players[g.turn()];
 			Move newMove = currentPlayer.getMove(g, lastMove);
@@ -34,7 +38,9 @@ class Konane{
 			lastMove = newMove;
 		}
 
-		System.out.println(g);
+		if(printGames){
+			System.out.println(g);
+		}
 		System.out.println(GameState.PLAYER_SYMBOL[g.winner()] + " has won!");
 
 		return;
@@ -58,7 +64,9 @@ class Konane{
 	}
 
 	public static void main(String[] args){
-		Konane s = new Konane(new RandomAgent(GameState.PLAYER1), new ABMinimaxAgent(GameState.PLAYER2));
+		for(int i=0; i<10; i++){
+			Konane s = new Konane(new ABMinimaxAgent(GameState.PLAYER1, ABMinimaxAgent.DIFFERENCEMOVES), new ABMinimaxAgent(GameState.PLAYER2, ABMinimaxAgent.NUMMOVES));
+		}
 	}
 
 }
