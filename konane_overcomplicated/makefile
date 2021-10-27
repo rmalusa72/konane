@@ -13,7 +13,7 @@ CLASSES = \
 		RandomAgent.java \
 		MinimaxAgent.java \
 		ABMinimaxAgent.java \
-		IDABMinimaxAgent.java
+		Point.java
 
 default: classes
 

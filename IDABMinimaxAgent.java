@@ -6,59 +6,113 @@ import java.util.Random;
 
 // POSSIBLE TODO LATER:
 // Save some information while searching 
-// Evaluate performance against random agent
-// Iterative deepening 
+// Add cutoff value from minimax so we don't keep searching when all states are terminal
+// Compare times, performance to standard abminimax with depth 7 or 8 
 
-public class ABMinimaxAgent implements Agent{
+public class IDABMinimaxAgent implements Agent{
 	int player;
-	int depthLimit;
 	int strategy;
+	boolean idCutoff; 
+	int timeLimit;
+
 	public static final int NUMPIECES = 0;
 	public static final int NUMMOVES = 1;
 	public static final int DIFFERENCEMOVES = 2; 
+	public static final int SECPERMIL = 1000;
+	//public static final int TIMELIMIT = 5; 
 
-	public ABMinimaxAgent(int _player, int _strategy, int _depthLimit){
+	public IDABMinimaxAgent(int _player, int _strategy, int _timeLimit){
 		player=_player;
-		depthLimit=_depthLimit;
 		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES))){
 			throw new IllegalArgumentException("Invalid strategy");
 		}
 		strategy = _strategy;
+		idCutoff = false;
+		timeLimit = _timeLimit;
 
 	}
 
-	// Find and return minimax-recommended move 
 	public Move getMove(GameState g, Move lastMove){
+		return getMove(g, lastMove, timeLimit);
+	}
+
+
+	// Find and return minimax-recommended move 
+	private Move getMove(GameState g, Move lastMove, int timeInSeconds){
+		
+		long startTimeMillis = System.currentTimeMillis();
+
 		// Generate possible successors 
 		ArrayList<Move> successors = g.getPossibleMoves();
 		
-		int bestMoveValue = Integer.MIN_VALUE;
-		Move bestMove = null;
+		int overallBestMoveValue = Integer.MIN_VALUE;
+		Move overallBestMove = null;
+		int depth = 2; 
 
-		for(int i=0; i<successors.size(); i++){
-			// Get gamestate resulting from each 
-			Move move = successors.get(i);
-			//System.out.println(move);
-			GameState result = g.applyMove(move);
-			//System.out.println(result);
+		while((System.currentTimeMillis() - startTimeMillis < SECPERMIL*timeInSeconds)){
+			
+			int bestMoveValue = Integer.MIN_VALUE;
+			Move bestMove = null;
+			boolean timecutoff = false;
+			idCutoff = false;
 
-			//Apply minimax to each to determine expected value 
-			int value = minValue(result, 1, depthLimit, Integer.MIN_VALUE, Integer.MAX_VALUE);
+			for(int i=0; i<successors.size(); i++){
+				
+				if(System.currentTimeMillis() - startTimeMillis > SECPERMIL*timeInSeconds){
+					System.out.println("Cutoff mid-depth " + Integer.toString(depth));
+					timecutoff = true;
+					break;
+				}
 
-			if(value > bestMoveValue){
-				bestMoveValue = value;
-				bestMove = move;
+				// Get gamestate resulting from each 
+				Move move = successors.get(i);
+				//System.out.println(move);
+				GameState result = g.applyMove(move);
+				//System.out.println(result);
+
+				//Apply minimax to each to determine expected value 
+				int value = minValue(result, 1, depth, Integer.MIN_VALUE, Integer.MAX_VALUE);
+
+				if(value > bestMoveValue){
+					bestMoveValue = value;
+					bestMove = move;
+				}
+
+			}	
+
+			if(!idCutoff){	
+				overallBestMoveValue = bestMoveValue;
+				overallBestMove = bestMove; 
+				System.out.println("Explored whole move tree. Move " + bestMove.toString() + " at depth " + Integer.toString(depth) + " in " + Long.toString(System.currentTimeMillis() - startTimeMillis));					
+				break; 
 			}
 
+			if(!timecutoff){
+				
+			
+				overallBestMoveValue = bestMoveValue;
+				overallBestMove = bestMove; 
+
+				System.out.println("Move " + bestMove.toString() + " at depth " + Integer.toString(depth) + " in " + Long.toString(System.currentTimeMillis() - startTimeMillis));					
+			
+				depth++; 	
+			}
+
+
+			
 		}
-		return bestMove;
+		return overallBestMove;
 	}
 
 	private int maxValue(GameState g, int depth, int depthLimit, int alpha, int beta){
 		
 		// Depth/terminal cutoff 
-		if(g.isTerminal() || depth == depthLimit){
+		if(g.isTerminal()){
 			return e(g);
+		}
+		if(depth == depthLimit){
+			idCutoff = true;
+			return e(g); 
 		}
 
 		// Generate successors
@@ -83,8 +137,12 @@ public class ABMinimaxAgent implements Agent{
 
 	private int minValue(GameState g, int depth, int depthLimit, int alpha, int beta){
 		// Depth/terminal cutoff 
-		if(g.isTerminal() || depth == depthLimit){
+		if(g.isTerminal()){
 			return e(g);
+		}
+		if(depth == depthLimit){
+			idCutoff = true;
+			return e(g); 
 		}
 
 		// Generate successors

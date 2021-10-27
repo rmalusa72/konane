@@ -7,24 +7,14 @@ import java.util.Random;
 // POSSIBLE TODO LATER:
 // Save some information while searching 
 // Evaluate performance against random agent
-// Iterative deepening 
 
-public class ABMinimaxAgent implements Agent{
+public class MinimaxAgent implements Agent{
 	int player;
 	int depthLimit;
-	int strategy;
-	public static final int NUMPIECES = 0;
-	public static final int NUMMOVES = 1;
-	public static final int DIFFERENCEMOVES = 2; 
 
-	public ABMinimaxAgent(int _player, int _strategy, int _depthLimit){
+	public MinimaxAgent(int _player){
 		player=_player;
-		depthLimit=_depthLimit;
-		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES))){
-			throw new IllegalArgumentException("Invalid strategy");
-		}
-		strategy = _strategy;
-
+		depthLimit=5;
 	}
 
 	// Find and return minimax-recommended move 
@@ -38,12 +28,12 @@ public class ABMinimaxAgent implements Agent{
 		for(int i=0; i<successors.size(); i++){
 			// Get gamestate resulting from each 
 			Move move = successors.get(i);
-			//System.out.println(move);
+			System.out.println(move);
 			GameState result = g.applyMove(move);
-			//System.out.println(result);
+			System.out.println(result);
 
 			//Apply minimax to each to determine expected value 
-			int value = minValue(result, 1, depthLimit, Integer.MIN_VALUE, Integer.MAX_VALUE);
+			int value = minimaxRecursive(result, 1, depthLimit);
 
 			if(value > bestMoveValue){
 				bestMoveValue = value;
@@ -53,60 +43,6 @@ public class ABMinimaxAgent implements Agent{
 		}
 		return bestMove;
 	}
-
-	private int maxValue(GameState g, int depth, int depthLimit, int alpha, int beta){
-		
-		// Depth/terminal cutoff 
-		if(g.isTerminal() || depth == depthLimit){
-			return e(g);
-		}
-
-		// Generate successors
-		ArrayList<Move> successors = g.getPossibleMoves();
-		for(int i=0; i<successors.size(); i++){
-			// Evaluate this successor
-			GameState result = g.applyMove(successors.get(i));
-			int value = minValue(result, depth+1, depthLimit, alpha, beta);
-			
-			// Update alpha 
-			if(value > alpha){
-				alpha = value;
-			}
-
-			//Possible cutoff 
-			if(alpha >= beta){
-				return beta;
-			}
-		}
-		return alpha; 
-	}
-
-	private int minValue(GameState g, int depth, int depthLimit, int alpha, int beta){
-		// Depth/terminal cutoff 
-		if(g.isTerminal() || depth == depthLimit){
-			return e(g);
-		}
-
-		// Generate successors
-		ArrayList<Move> successors = g.getPossibleMoves();
-		for(int i=0; i<successors.size(); i++){
-			// Evaluate this successor
-			GameState result = g.applyMove(successors.get(i));
-			int value = maxValue(result, depth+1, depthLimit, alpha, beta);
-			
-			// Update alpha 
-			if(value < beta){
-				beta = value;
-			}
-
-			//Possible cutoff 
-			if(beta <= alpha){
-				return alpha;
-			}
-		}
-		return beta; 
-	}
-
 
 	private int minimaxRecursive(GameState g, int depth, int depthLimit){
 		
@@ -152,20 +88,15 @@ public class ABMinimaxAgent implements Agent{
 	private int e(GameState g){
 		if(g.isTerminal()){
 			if(g.winner() == player){
-				return Integer.MAX_VALUE-1;
+				return Integer.MAX_VALUE;
 			} else {
-				return Integer.MIN_VALUE+1;
+				return Integer.MIN_VALUE;
 			}
 		}
 
-		if(strategy == NUMPIECES){
-			return g.numPieces(player);
-		} else if(strategy == NUMMOVES){
-			return g.numMoves(player);
-		} else if(strategy == DIFFERENCEMOVES){
-			return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
-		}
-		return 0;
+		//return g.numPieces(player);
+		//return g.numMoves(player);
+		return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
 	}
 
 	private boolean isMax(GameState g){

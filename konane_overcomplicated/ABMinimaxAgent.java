@@ -17,9 +17,9 @@ public class ABMinimaxAgent implements Agent{
 	public static final int NUMMOVES = 1;
 	public static final int DIFFERENCEMOVES = 2; 
 
-	public ABMinimaxAgent(int _player, int _strategy, int _depthLimit){
+	public ABMinimaxAgent(int _player, int _strategy){
 		player=_player;
-		depthLimit=_depthLimit;
+		depthLimit=6;
 		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES))){
 			throw new IllegalArgumentException("Invalid strategy");
 		}
