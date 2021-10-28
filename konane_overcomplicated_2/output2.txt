@@ -1,0 +1,4076 @@
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <4,2> to <4,4>  at depth 2 in 46
+Move X moves from <4,2> to <4,4>  at depth 3 in 67
+Move X moves from <4,2> to <4,4>  at depth 4 in 117
+Move X moves from <4,2> to <4,4>  at depth 5 in 191
+Move X moves from <4,2> to <4,4>  at depth 6 in 437
+Move X moves from <4,2> to <4,4>  at depth 7 in 911
+Move X moves from <4,2> to <4,4>  at depth 8 in 3346
+X moves from <4,2> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <4,7> to <4,5> to <4,3> 
+O moves from <4,7> to <4,5> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <6,2> to <4,2>  at depth 2 in 2
+Move X moves from <6,4> to <4,4>  at depth 3 in 10
+Move X moves from <6,2> to <4,2>  at depth 4 in 34
+Move X moves from <6,2> to <4,2>  at depth 5 in 134
+Move X moves from <6,2> to <4,2>  at depth 6 in 591
+Move X moves from <6,2> to <4,2>  at depth 7 in 2213
+Cutoff mid-depth 8
+X moves from <6,2> to <4,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <2,7> to <4,7> 
+O moves from <2,7> to <4,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X . X 
+3	X O X O X O . O 
+4	O X O . . . O X 
+5	X . X O X O X O 
+6	O . O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <4,2> to <4,4>  at depth 2 in 3
+Move X moves from <8,2> to <6,2>  at depth 3 in 9
+Move X moves from <8,2> to <6,2>  at depth 4 in 44
+Move X moves from <8,2> to <6,2>  at depth 5 in 184
+Move X moves from <8,2> to <6,2>  at depth 6 in 691
+Move X moves from <8,2> to <6,2>  at depth 7 in 3182
+X moves from <8,2> to <6,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X . X 
+3	X O X O X O . O 
+4	O X O . . . O X 
+5	X . X O X O X O 
+6	O X O X O X O X 
+7	X . X O X O X O 
+8	O . O X O X O X 
+
+O moves from <3,2> to <5,2> to <7,2> 
+O moves from <3,2> to <5,2> to <7,2> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X . X 
+3	X . X O X O . O 
+4	O . O . . . O X 
+5	X . X O X O X O 
+6	O . O X O X O X 
+7	X O X O X O X O 
+8	O . O X O X O X 
+
+Move X moves from <8,4> to <8,2>  at depth 2 in 2
+Move X moves from <8,4> to <8,2>  at depth 3 in 8
+Move X moves from <8,4> to <8,2>  at depth 4 in 37
+Move X moves from <8,4> to <8,2>  at depth 5 in 137
+Move X moves from <8,4> to <8,2>  at depth 6 in 580
+Move X moves from <8,4> to <8,2>  at depth 7 in 2333
+Cutoff mid-depth 8
+X moves from <8,4> to <8,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X . X 
+3	X . X O X O . O 
+4	O . O . . . O X 
+5	X . X O X O X O 
+6	O . O X O X O X 
+7	X O X O X O X O 
+8	O X . . O X O X 
+
+O moves from <5,4> to <5,2> 
+O moves from <5,4> to <5,2> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X . X 
+3	X . X O X O . O 
+4	O . O . . . O X 
+5	X O . . X O X O 
+6	O . O X O X O X 
+7	X O X O X O X O 
+8	O X . . O X O X 
+
+Move X moves from <2,4> to <4,4>  at depth 2 in 3
+Move X moves from <8,6> to <8,4>  at depth 3 in 17
+Move X moves from <6,4> to <6,2>  at depth 4 in 102
+Move X moves from <8,6> to <8,4>  at depth 5 in 479
+Move X moves from <6,4> to <6,2>  at depth 6 in 2215
+Cutoff mid-depth 7
+X moves from <6,4> to <6,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X . X 
+3	X . X O X O . O 
+4	O . O . . . O X 
+5	X O . . X O X O 
+6	O X . . O X O X 
+7	X O X O X O X O 
+8	O X . . O X O X 
+
+O moves from <2,5> to <4,5> 
+O moves from <2,5> to <4,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X . X . X 
+3	X . X O . O . O 
+4	O . O . O . O X 
+5	X O . . X O X O 
+6	O X . . O X O X 
+7	X O X O X O X O 
+8	O X . . O X O X 
+
+Move X moves from <8,6> to <8,4>  at depth 2 in 3
+Move X moves from <2,4> to <4,4>  at depth 3 in 23
+Move X moves from <2,4> to <4,4>  at depth 4 in 117
+Move X moves from <2,4> to <4,4>  at depth 5 in 706
+Move X moves from <8,6> to <8,4>  at depth 6 in 2995
+Cutoff mid-depth 7
+X moves from <8,6> to <8,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X . X . X 
+3	X . X O . O . O 
+4	O . O . O . O X 
+5	X O . . X O X O 
+6	O X . . O X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+O moves from <5,6> to <5,4> 
+O moves from <5,6> to <5,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X . X . X 
+3	X . X O . O . O 
+4	O . O . O . O X 
+5	X O . O . . X O 
+6	O X . . O X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+Move X moves from <7,5> to <5,5>  at depth 2 in 4
+Move X moves from <2,4> to <4,4>  at depth 3 in 42
+Move X moves from <2,4> to <4,4>  at depth 4 in 216
+Move X moves from <2,4> to <4,4>  at depth 5 in 1443
+Cutoff mid-depth 6
+X moves from <2,4> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O . . X . X 
+3	X . X . . O . O 
+4	O . O X O . O X 
+5	X O . O . . X O 
+6	O X . . O X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+O moves from <1,2> to <3,2> 
+O moves from <1,2> to <3,2> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X O X O X O 
+2	O . O . . X . X 
+3	X O X . . O . O 
+4	O . O X O . O X 
+5	X O . O . . X O 
+6	O X . . O X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+Move X moves from <5,7> to <3,7>  at depth 2 in 6
+Move X moves from <5,7> to <3,7>  at depth 3 in 32
+Move X moves from <7,5> to <5,5>  at depth 4 in 163
+Move X moves from <6,2> to <4,2>  at depth 5 in 1021
+Cutoff mid-depth 6
+X moves from <6,2> to <4,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X O X O X O 
+2	O . O . . X . X 
+3	X O X . . O . O 
+4	O X O X O . O X 
+5	X . . O . . X O 
+6	O . . . O X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+O moves from <3,2> to <3,4> 
+O moves from <3,2> to <3,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X O X O X O 
+2	O . O . . X . X 
+3	X . . O . O . O 
+4	O X O X O . O X 
+5	X . . O . . X O 
+6	O . . . O X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+Move X moves from <5,7> to <3,7>  at depth 2 in 2
+Move X moves from <5,7> to <3,7>  at depth 3 in 15
+Move X moves from <5,7> to <3,7>  at depth 4 in 65
+Move X moves from <5,7> to <3,7>  at depth 5 in 331
+Move X moves from <1,3> to <3,3>  at depth 6 in 1101
+Cutoff mid-depth 7
+X moves from <1,3> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . O X O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . . X O 
+6	O . . . O X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+O moves from <8,1> to <8,3> 
+O moves from <8,1> to <8,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . O X O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . . X O 
+6	O . . . O X O X 
+7	X O X O X O X O 
+8	. . O X . . O X 
+
+Move X moves from <8,4> to <8,2>  at depth 2 in 2
+Move X moves from <8,4> to <8,2>  at depth 3 in 15
+Move X moves from <1,5> to <1,3>  at depth 4 in 79
+Move X moves from <1,5> to <1,3>  at depth 5 in 389
+Move X moves from <1,5> to <1,3>  at depth 6 in 1597
+Cutoff mid-depth 7
+X moves from <1,5> to <1,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . . X O 
+6	O . . . O X O X 
+7	X O X O X O X O 
+8	. . O X . . O X 
+
+O moves from <7,6> to <5,6> 
+O moves from <7,6> to <5,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X O X O X . X O 
+8	. . O X . . O X 
+
+Move X moves from <8,4> to <8,2>  at depth 2 in 7
+Move X moves from <8,4> to <8,2>  at depth 3 in 21
+Move X moves from <8,4> to <8,2>  at depth 4 in 84
+Move X moves from <8,4> to <8,2>  at depth 5 in 427
+Move X moves from <8,4> to <8,2>  at depth 6 in 1438
+Cutoff mid-depth 7
+X moves from <8,4> to <8,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X O X O X . X O 
+8	. X . . . . O X 
+
+O moves from <7,4> to <7,6> 
+O moves from <7,4> to <7,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X O X . . O X O 
+8	. X . . . . O X 
+
+Move X moves from <7,7> to <7,5>  at depth 2 in 2
+Move X moves from <7,7> to <7,5>  at depth 3 in 12
+Move X moves from <8,2> to <6,2>  at depth 4 in 38
+Move X moves from <8,2> to <6,2>  at depth 5 in 208
+Move X moves from <7,7> to <7,5>  at depth 6 in 616
+Cutoff mid-depth 7
+X moves from <7,7> to <7,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X O X . X . . O 
+8	. X . . . . O X 
+
+O moves from <7,2> to <7,4> 
+O moves from <7,2> to <7,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X . . O X . . O 
+8	. X . . . . O X 
+
+Move X moves from <8,8> to <8,6>  at depth 2 in 2
+Move X moves from <8,8> to <8,6>  at depth 3 in 13
+Move X moves from <7,5> to <7,3>  at depth 4 in 51
+Move X moves from <8,8> to <8,6>  at depth 5 in 255
+Move X moves from <7,5> to <7,3>  at depth 6 in 727
+Cutoff mid-depth 7
+X moves from <7,5> to <7,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X O X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X . X . . . . O 
+8	. X . . . . O X 
+
+O moves from <4,3> to <2,3> 
+O moves from <4,3> to <2,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X . . O X O 
+2	O . O . . X . X 
+3	X . . O . O . O 
+4	O X . X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X . X . . . . O 
+8	. X . . . . O X 
+
+Move X moves from <8,8> to <8,6>  at depth 2 in 1
+Move X moves from <1,3> to <3,3>  at depth 3 in 7
+Move X moves from <1,3> to <3,3>  at depth 4 in 23
+Move X moves from <8,8> to <8,6>  at depth 5 in 112
+Move X moves from <1,3> to <3,3>  at depth 6 in 307
+Move X moves from <1,3> to <3,3>  at depth 7 in 1146
+Move X moves from <1,3> to <3,3>  at depth 8 in 2863
+Cutoff mid-depth 9
+X moves from <1,3> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X . X O . O X 
+5	X . . O . O X O 
+6	O . . . O . O X 
+7	X . X . . . . O 
+8	. X . . . . O X 
+
+O moves from <6,1> to <8,1> 
+O moves from <6,1> to <8,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X . X O . O X 
+5	X . . O . O X O 
+6	. . . . O . O X 
+7	. . X . . . . O 
+8	O X . . . . O X 
+
+Move X moves from <8,8> to <8,6>  at depth 2 in 1
+Move X moves from <8,8> to <8,6>  at depth 3 in 9
+Move X moves from <8,8> to <8,6>  at depth 4 in 33
+Move X moves from <8,8> to <8,6>  at depth 5 in 138
+Move X moves from <8,8> to <8,6>  at depth 6 in 403
+Move X moves from <8,8> to <8,6>  at depth 7 in 1513
+Cutoff mid-depth 8
+X moves from <8,8> to <8,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X . X O . O X 
+5	X . . O . O X O 
+6	. . . . O . O X 
+7	. . X . . . . O 
+8	O X . . . X . . 
+
+O moves from <8,1> to <8,3> 
+O moves from <8,1> to <8,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . . . X . X 
+3	X . X O . O . O 
+4	O X . X O . O X 
+5	X . . O . O X O 
+6	. . . . O . O X 
+7	. . X . . . . O 
+8	. . O . . X . . 
+
+Move X moves from <4,4> to <2,4>  at depth 2 in 1
+Move X moves from <4,4> to <6,4>  at depth 3 in 9
+Move X moves from <4,4> to <2,4>  at depth 4 in 28
+Move X moves from <6,8> to <8,8>  at depth 5 in 123
+Move X moves from <3,3> to <3,5>  at depth 6 in 356
+Move X moves from <3,3> to <3,5>  at depth 7 in 1194
+Move X moves from <4,4> to <2,4>  at depth 8 in 2959
+Cutoff mid-depth 9
+X moves from <4,4> to <2,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . X . X . X 
+3	X . X . . O . O 
+4	O X . . O . O X 
+5	X . . O . O X O 
+6	. . . . O . O X 
+7	. . X . . . . O 
+8	. . O . . X . . 
+
+O moves from <4,1> to <6,1> 
+O moves from <4,1> to <6,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . X . X . X 
+3	X . X . . O . O 
+4	. X . . O . O X 
+5	. . . O . O X O 
+6	O . . . O . O X 
+7	. . X . . . . O 
+8	. . O . . X . . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 1
+Move X moves from <6,8> to <8,8>  at depth 3 in 4
+Move X moves from <1,7> to <1,5>  at depth 4 in 12
+Move X moves from <5,7> to <3,7>  at depth 5 in 47
+Move X moves from <5,7> to <5,5>  at depth 6 in 122
+Move X moves from <5,7> to <5,5> to <5,3>  at depth 7 in 376
+Move X moves from <5,7> to <5,5> to <5,3>  at depth 8 in 884
+Move X moves from <5,7> to <5,5>  at depth 9 in 2380
+Cutoff mid-depth 10
+X moves from <5,7> to <5,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . X . X . X 
+3	X . X . . O . O 
+4	. X . . O . O X 
+5	. . . O X . . O 
+6	O . . . O . O X 
+7	. . X . . . . O 
+8	. . O . . X . . 
+
+O moves from <8,3> to <6,3> 
+O moves from <8,3> to <6,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O X O 
+2	O . . X . X . X 
+3	X . X . . O . O 
+4	. X . . O . O X 
+5	. . . O X . . O 
+6	O . O . O . O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+Move X moves from <4,8> to <4,6>  at depth 2 in 1
+Move X moves from <1,7> to <1,5>  at depth 3 in 3
+Move X moves from <5,5> to <7,5>  at depth 4 in 8
+Move X moves from <5,5> to <7,5>  at depth 5 in 27
+Move X moves from <5,5> to <7,5>  at depth 6 in 70
+Move X moves from <2,6> to <4,6>  at depth 7 in 207
+Move X moves from <2,6> to <4,6>  at depth 8 in 446
+Move X moves from <2,6> to <4,6>  at depth 9 in 881
+Move X moves from <2,6> to <4,6>  at depth 10 in 1577
+Move X moves from <1,7> to <1,5>  at depth 11 in 2860
+Cutoff mid-depth 12
+X moves from <1,7> to <1,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	O . . X . X . X 
+3	X . X . . O . O 
+4	. X . . O . O X 
+5	. . . O X . . O 
+6	O . O . O . O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+O moves from <5,4> to <5,6> 
+O moves from <5,4> to <5,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	O . . X . X . X 
+3	X . X . . O . O 
+4	. X . . O . O X 
+5	. . . . . O . O 
+6	O . O . O . O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+Move X moves from <4,8> to <4,6>  at depth 2 in 0
+Move X moves from <2,6> to <4,6> to <6,6>  at depth 3 in 1
+Move X moves from <2,6> to <4,6> to <6,6>  at depth 4 in 4
+Move X moves from <2,6> to <4,6> to <6,6>  at depth 5 in 11
+Move X moves from <2,6> to <4,6> to <6,6>  at depth 6 in 26
+Move X moves from <2,6> to <4,6>  at depth 7 in 61
+Move X moves from <2,6> to <4,6>  at depth 8 in 114
+Move X moves from <2,6> to <4,6>  at depth 9 in 224
+Move X moves from <2,6> to <4,6>  at depth 10 in 361
+Move X moves from <2,6> to <4,6>  at depth 11 in 575
+Move X moves from <2,6> to <4,6>  at depth 12 in 835
+Move X moves from <2,6> to <4,6>  at depth 13 in 1118
+Move X moves from <2,6> to <4,6>  at depth 14 in 1433
+Move X moves from <2,6> to <4,6>  at depth 15 in 1724
+Move X moves from <2,6> to <4,6>  at depth 16 in 2003
+Move X moves from <2,6> to <4,6>  at depth 17 in 2287
+Move X moves from <2,6> to <4,6>  at depth 18 in 2573
+Move X moves from <2,6> to <4,6>  at depth 19 in 2850
+Cutoff mid-depth 20
+Explored whole move tree. Move X moves from <2,6> to <4,6>  at depth 20 in 3071
+X moves from <2,6> to <4,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	O . . X . . . X 
+3	X . X . . . . O 
+4	. X . . O X O X 
+5	. . . . . O . O 
+6	O . O . O . O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+O moves from <2,1> to <4,1> 
+O moves from <2,1> to <4,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . X 
+3	. . X . . . . O 
+4	O X . . O X O X 
+5	. . . . . O . O 
+6	O . O . O . O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+Move X moves from <4,6> to <6,6>  at depth 2 in 0
+Move X moves from <4,6> to <6,6>  at depth 3 in 0
+Move X moves from <4,6> to <6,6>  at depth 4 in 1
+Move X moves from <4,6> to <6,6>  at depth 5 in 3
+Move X moves from <4,6> to <6,6>  at depth 6 in 9
+Move X moves from <4,6> to <6,6>  at depth 7 in 16
+Move X moves from <4,6> to <6,6>  at depth 8 in 26
+Move X moves from <4,6> to <6,6>  at depth 9 in 42
+Move X moves from <4,6> to <6,6>  at depth 10 in 63
+Move X moves from <4,6> to <6,6>  at depth 11 in 86
+Move X moves from <4,6> to <6,6>  at depth 12 in 112
+Move X moves from <4,6> to <6,6>  at depth 13 in 135
+Move X moves from <4,6> to <6,6>  at depth 14 in 161
+Move X moves from <4,6> to <6,6>  at depth 15 in 185
+Explored whole move tree. Move X moves from <4,6> to <6,6>  at depth 16 in 211
+X moves from <4,6> to <6,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . X 
+3	. . X . . . . O 
+4	O X . . O . O X 
+5	. . . . . . . O 
+6	O . O . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+O moves from <4,1> to <4,3> 
+O moves from <4,1> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . X 
+3	. . X . . . . O 
+4	. . O . O . O X 
+5	. . . . . . . O 
+6	O . O . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+Move X moves from <3,3> to <5,3> to <7,3>  at depth 2 in 0
+Move X moves from <3,3> to <5,3>  at depth 3 in 0
+Move X moves from <3,3> to <5,3>  at depth 4 in 1
+Move X moves from <3,3> to <5,3>  at depth 5 in 4
+Move X moves from <3,3> to <5,3>  at depth 6 in 7
+Move X moves from <3,3> to <5,3>  at depth 7 in 12
+Move X moves from <3,3> to <5,3>  at depth 8 in 18
+Move X moves from <3,3> to <5,3>  at depth 9 in 26
+Move X moves from <3,3> to <5,3>  at depth 10 in 35
+Move X moves from <3,3> to <5,3>  at depth 11 in 47
+Move X moves from <3,3> to <5,3>  at depth 12 in 55
+Explored whole move tree. Move X moves from <3,3> to <5,3>  at depth 13 in 65
+X moves from <3,3> to <5,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . X 
+3	. . . . . . . O 
+4	. . . . O . O X 
+5	. . X . . . . O 
+6	O . O . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+O moves from <6,3> to <4,3> 
+O moves from <6,3> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . X 
+3	. . . . . . . O 
+4	. . O . O . O X 
+5	. . . . . . . O 
+6	O . . . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+Move X moves from <4,8> to <4,6> to <4,4> to <4,2>  at depth 2 in 0
+Move X moves from <4,8> to <4,6>  at depth 3 in 0
+Move X moves from <4,8> to <4,6>  at depth 4 in 0
+Move X moves from <4,8> to <4,6>  at depth 5 in 0
+Move X moves from <4,8> to <4,6>  at depth 6 in 0
+Move X moves from <4,8> to <4,6>  at depth 7 in 0
+Explored whole move tree. Move X moves from <4,8> to <4,6>  at depth 8 in 0
+X moves from <4,8> to <4,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . X 
+3	. . . . . . . O 
+4	. . O . O X . . 
+5	. . . . . . . O 
+6	O . . . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+O moves from <4,5> to <4,7> 
+O moves from <4,5> to <4,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . X 
+3	. . . . . . . O 
+4	. . O . . . O . 
+5	. . . . . . . O 
+6	O . . . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+Move X moves from <6,6> to <6,4>  at depth 2 in 0
+Move X moves from <2,8> to <4,8>  at depth 3 in 0
+Move X moves from <2,8> to <4,8>  at depth 4 in 0
+Move X moves from <2,8> to <4,8>  at depth 5 in 0
+Explored whole move tree. Move X moves from <2,8> to <4,8>  at depth 6 in 0
+X moves from <2,8> to <4,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . . 
+3	. . . . . . . . 
+4	. . O . . . O X 
+5	. . . . . . . O 
+6	O . . . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+O moves from <5,8> to <3,8> 
+O moves from <5,8> to <3,8> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . . 
+3	. . . . . . . O 
+4	. . O . . . O . 
+5	. . . . . . . . 
+6	O . . . O X O X 
+7	. . . . . . . O 
+8	. . . . . X . . 
+
+Explored whole move tree. Move X moves from <6,8> to <8,8>  at depth 2 in 0
+X moves from <6,8> to <8,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . . O 
+2	. . . X . . . . 
+3	. . . . . . . O 
+4	. . O . . . O . 
+5	. . . . . . . . 
+6	O . . . O X O . 
+7	. . . . . . . . 
+8	. . . . . X . X 
+
+X has won!
+[24, 23]
+[63188, 4]
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <4,2> to <4,4>  at depth 2 in 5
+Move X moves from <4,2> to <4,4>  at depth 3 in 15
+Move X moves from <4,2> to <4,4>  at depth 4 in 32
+Move X moves from <4,2> to <4,4>  at depth 5 in 60
+Move X moves from <4,2> to <4,4>  at depth 6 in 229
+Move X moves from <4,2> to <4,4>  at depth 7 in 665
+Move X moves from <4,2> to <4,4>  at depth 8 in 3283
+X moves from <4,2> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <6,3> to <4,3> 
+O moves from <6,3> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . O X . X O X 
+5	X O . O X O X O 
+6	O X . X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <3,3> to <5,3>  at depth 2 in 3
+Move X moves from <3,3> to <5,3>  at depth 3 in 8
+Move X moves from <3,3> to <5,3>  at depth 4 in 39
+Move X moves from <3,3> to <5,3>  at depth 5 in 144
+Move X moves from <3,3> to <5,3>  at depth 6 in 773
+Move X moves from <3,3> to <5,3>  at depth 7 in 3057
+X moves from <3,3> to <5,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O . O X O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X . X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <4,7> to <4,5> to <4,3> 
+O moves from <4,7> to <4,5> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O . O X O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X . X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <5,3> to <3,3>  at depth 2 in 2
+Move X moves from <3,5> to <3,3>  at depth 3 in 18
+Move X moves from <6,4> to <4,4>  at depth 4 in 106
+Move X moves from <5,3> to <3,3>  at depth 5 in 510
+Move X moves from <3,5> to <3,3>  at depth 6 in 2512
+Cutoff mid-depth 7
+X moves from <3,5> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X . . O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X . X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <6,5> to <6,3> 
+O moves from <6,5> to <6,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X . . O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O . . X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <6,2> to <4,2>  at depth 2 in 2
+Move X moves from <6,2> to <6,4>  at depth 3 in 12
+Move X moves from <6,2> to <6,4>  at depth 4 in 73
+Move X moves from <6,2> to <6,4>  at depth 5 in 345
+Move X moves from <6,2> to <6,4>  at depth 6 in 1891
+Cutoff mid-depth 7
+X moves from <6,2> to <6,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X . . O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O . . X . X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <3,2> to <3,4> 
+O moves from <3,2> to <3,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X . . O . O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O . . X . X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <1,3> to <3,3>  at depth 2 in 4
+Move X moves from <6,6> to <4,6>  at depth 3 in 20
+Move X moves from <1,3> to <3,3>  at depth 4 in 118
+Move X moves from <8,2> to <6,2>  at depth 5 in 551
+Move X moves from <8,2> to <6,2>  at depth 6 in 2729
+Cutoff mid-depth 7
+X moves from <8,2> to <6,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X . . O . O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X . X . X O X 
+7	X . X O X O X O 
+8	O . O X O X O X 
+
+O moves from <8,3> to <6,3> 
+O moves from <8,3> to <6,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X . . O . O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O X . X O X 
+7	X . . O X O X O 
+8	O . . X O X O X 
+
+Move X moves from <6,2> to <4,2>  at depth 2 in 3
+Move X moves from <6,2> to <4,2>  at depth 3 in 18
+Move X moves from <6,2> to <4,2>  at depth 4 in 109
+Move X moves from <6,2> to <4,2>  at depth 5 in 492
+Move X moves from <6,2> to <4,2>  at depth 6 in 2418
+Cutoff mid-depth 7
+X moves from <6,2> to <4,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X . . O . O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X . X O X 
+7	X . . O X O X O 
+8	O . . X O X O X 
+
+O moves from <8,5> to <8,3> 
+O moves from <8,5> to <8,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X . . O . O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X . X O X 
+7	X . . O X O X O 
+8	O . O . . X O X 
+
+Move X moves from <7,5> to <7,3>  at depth 2 in 2
+Move X moves from <1,5> to <3,5>  at depth 3 in 17
+Move X moves from <6,4> to <8,4>  at depth 4 in 94
+Move X moves from <1,3> to <3,3>  at depth 5 in 463
+Move X moves from <1,5> to <3,5>  at depth 6 in 2108
+Cutoff mid-depth 7
+X moves from <1,5> to <3,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O X O X . X O X 
+3	X . . O X O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X . X O X 
+7	X . . O X O X O 
+8	O . O . . X O X 
+
+O moves from <2,3> to <2,5> 
+O moves from <2,3> to <2,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O X . . O X O X 
+3	X . . O X O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X . X O X 
+7	X . . O X O X O 
+8	O . O . . X O X 
+
+Move X moves from <2,6> to <2,4>  at depth 2 in 4
+Move X moves from <2,6> to <2,4>  at depth 3 in 25
+Move X moves from <2,6> to <2,4>  at depth 4 in 136
+Move X moves from <1,3> to <1,5>  at depth 5 in 643
+Move X moves from <2,6> to <2,4>  at depth 6 in 2810
+Cutoff mid-depth 7
+X moves from <2,6> to <2,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O X . X . . O X 
+3	X . . O X O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X . X O X 
+7	X . . O X O X O 
+8	O . O . . X O X 
+
+O moves from <2,1> to <2,3> to <2,5> 
+O moves from <2,1> to <2,3> to <2,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	. . . . O . O X 
+3	X . . O X O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X . X O X 
+7	X . . O X O X O 
+8	O . O . . X O X 
+
+Move X moves from <2,8> to <2,6> to <2,4>  at depth 2 in 3
+Move X moves from <2,8> to <2,6> to <2,4>  at depth 3 in 17
+Move X moves from <7,5> to <7,3>  at depth 4 in 91
+Move X moves from <2,8> to <2,6>  at depth 5 in 437
+Move X moves from <7,5> to <7,3>  at depth 6 in 1749
+Cutoff mid-depth 7
+X moves from <7,5> to <7,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	. . . . O . O X 
+3	X . . O X O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X . X O X 
+7	X . X . . O X O 
+8	O . O . . X O X 
+
+O moves from <2,5> to <4,5> to <6,5> 
+O moves from <2,5> to <4,5> to <6,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	. . . . . . O X 
+3	X . . O . O X O 
+4	O X O . . . . X 
+5	X . X O . O X O 
+6	O . O X O X O X 
+7	X . X . . O X O 
+8	O . O . . X O X 
+
+Move X moves from <2,8> to <2,6>  at depth 2 in 2
+Move X moves from <2,8> to <2,6>  at depth 3 in 10
+Move X moves from <2,8> to <2,6>  at depth 4 in 49
+Move X moves from <2,8> to <2,6>  at depth 5 in 257
+Move X moves from <2,8> to <2,6>  at depth 6 in 916
+Cutoff mid-depth 7
+X moves from <2,8> to <2,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	. . . . . X . . 
+3	X . . O . O X O 
+4	O X O . . . . X 
+5	X . X O . O X O 
+6	O . O X O X O X 
+7	X . X . . O X O 
+8	O . O . . X O X 
+
+O moves from <4,1> to <2,1> 
+O moves from <4,1> to <2,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O . . . . X . . 
+3	. . . O . O X O 
+4	. X O . . . . X 
+5	X . X O . O X O 
+6	O . O X O X O X 
+7	X . X . . O X O 
+8	O . O . . X O X 
+
+Move X moves from <5,3> to <3,3>  at depth 2 in 2
+Move X moves from <5,3> to <3,3>  at depth 3 in 16
+Move X moves from <5,3> to <3,3>  at depth 4 in 69
+Move X moves from <5,3> to <3,3>  at depth 5 in 351
+Move X moves from <5,3> to <3,3>  at depth 6 in 1369
+Cutoff mid-depth 7
+X moves from <5,3> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O . . . . X . . 
+3	. . X O . O X O 
+4	. X . . . . . X 
+5	X . . O . O X O 
+6	O . O X O X O X 
+7	X . X . . O X O 
+8	O . O . . X O X 
+
+O moves from <8,7> to <8,5> 
+O moves from <8,7> to <8,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O . . . . X . . 
+3	. . X O . O X O 
+4	. X . . . . . X 
+5	X . . O . O X O 
+6	O . O X O X O X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+Move X moves from <1,1> to <3,1>  at depth 2 in 1
+Move X moves from <6,6> to <8,6>  at depth 3 in 11
+Move X moves from <6,4> to <4,4>  at depth 4 in 47
+Move X moves from <1,1> to <3,1>  at depth 5 in 312
+Move X moves from <6,4> to <4,4>  at depth 6 in 931
+Cutoff mid-depth 7
+X moves from <6,4> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O . . . . X . . 
+3	. . X O . O X O 
+4	. X . X . . . X 
+5	X . . . . O X O 
+6	O . O . O X O X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+O moves from <6,7> to <4,7> to <2,7> 
+O moves from <6,7> to <4,7> to <2,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O . . . . X O . 
+3	. . X O . O . O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . O X . X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+Move X moves from <1,1> to <3,1>  at depth 2 in 1
+Move X moves from <1,7> to <3,7>  at depth 3 in 8
+Move X moves from <1,7> to <3,7>  at depth 4 in 31
+Move X moves from <1,7> to <3,7>  at depth 5 in 130
+Move X moves from <1,7> to <3,7>  at depth 6 in 399
+Move X moves from <1,7> to <3,7>  at depth 7 in 1525
+Cutoff mid-depth 8
+X moves from <1,7> to <3,7> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O . O 
+2	O . . . . X . . 
+3	. . X O . O X O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . O X . X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+O moves from <3,4> to <3,2> 
+O moves from <3,4> to <3,2> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O . O 
+2	O . . . . X . . 
+3	. O . . . O X O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . O X . X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+Move X moves from <1,1> to <3,1>  at depth 2 in 1
+Move X moves from <1,1> to <3,1>  at depth 3 in 5
+Move X moves from <1,1> to <3,1>  at depth 4 in 19
+Move X moves from <1,1> to <3,1>  at depth 5 in 101
+Move X moves from <1,1> to <3,1>  at depth 6 in 290
+Move X moves from <1,1> to <3,1>  at depth 7 in 1293
+Cutoff mid-depth 8
+X moves from <1,1> to <3,1> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. O X O . O . O 
+2	. . . . . X . . 
+3	X O . . . O X O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . O X . X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+O moves from <6,5> to <6,7> 
+O moves from <6,5> to <6,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. O X O . O . O 
+2	. . . . . X . . 
+3	X O . . . O X O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . . . O X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+Move X moves from <6,8> to <6,6>  at depth 2 in 1
+Move X moves from <6,8> to <6,6>  at depth 3 in 7
+Move X moves from <6,8> to <6,6>  at depth 4 in 28
+Move X moves from <3,1> to <3,3>  at depth 5 in 138
+Move X moves from <6,8> to <6,6>  at depth 6 in 434
+Move X moves from <1,3> to <1,1>  at depth 7 in 1635
+Cutoff mid-depth 8
+X moves from <1,3> to <1,1> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . O . O . O 
+2	. . . . . X . . 
+3	X O . . . O X O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . . . O X 
+7	X . X . . O X O 
+8	O . O . O . . X 
+
+O moves from <6,7> to <8,7> 
+O moves from <6,7> to <8,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . O . O . O 
+2	. . . . . X . . 
+3	X O . . . O X O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . . . . X 
+7	X . X . . O . O 
+8	O . O . O . O X 
+
+Move X moves from <4,2> to <2,2>  at depth 2 in 1
+Move X moves from <4,2> to <2,2>  at depth 3 in 3
+Move X moves from <4,2> to <2,2>  at depth 4 in 9
+Move X moves from <4,2> to <2,2>  at depth 5 in 36
+Move X moves from <4,2> to <2,2>  at depth 6 in 96
+Move X moves from <3,1> to <3,3>  at depth 7 in 336
+Move X moves from <3,1> to <3,3>  at depth 8 in 740
+Move X moves from <8,8> to <8,6>  at depth 9 in 1739
+Cutoff mid-depth 10
+X moves from <8,8> to <8,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . O . O . O 
+2	. . . . . X . . 
+3	X O . . . O X O 
+4	. X . X . . . X 
+5	X . . . . O . O 
+6	O . O . . . . X 
+7	X . X . . O . O 
+8	O . O . O X . . 
+
+O moves from <3,2> to <5,2> 
+O moves from <3,2> to <5,2> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . O . O . O 
+2	. . . . . X . . 
+3	X . . . . O X O 
+4	. . . X . . . X 
+5	X O . . . O . O 
+6	O . O . . . . X 
+7	X . X . . O . O 
+8	O . O . O X . . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 1
+Move X moves from <5,1> to <5,3>  at depth 3 in 2
+Move X moves from <5,1> to <5,3>  at depth 4 in 9
+Move X moves from <5,1> to <5,3>  at depth 5 in 26
+Move X moves from <5,1> to <5,3>  at depth 6 in 62
+Move X moves from <8,6> to <6,6>  at depth 7 in 155
+Move X moves from <8,6> to <6,6>  at depth 8 in 338
+Move X moves from <8,6> to <6,6>  at depth 9 in 818
+Move X moves from <8,6> to <6,6>  at depth 10 in 1560
+Move X moves from <8,6> to <6,6>  at depth 11 in 2627
+Cutoff mid-depth 12
+X moves from <8,6> to <6,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . O . O . O 
+2	. . . . . X . . 
+3	X . . . . O X O 
+4	. . . X . . . X 
+5	X O . . . O . O 
+6	O . O . . X . X 
+7	X . X . . . . O 
+8	O . O . O . . . 
+
+O moves from <6,1> to <4,1> to <2,1> 
+O moves from <6,1> to <4,1> to <2,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . O . O . O 
+2	O . . . . X . . 
+3	. . . . . O X O 
+4	. . . X . . . X 
+5	. O . . . O . O 
+6	. . O . . X . X 
+7	X . X . . . . O 
+8	O . O . O . . . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 1
+Move X moves from <1,1> to <3,1>  at depth 3 in 1
+Move X moves from <1,1> to <3,1>  at depth 4 in 3
+Move X moves from <1,1> to <3,1>  at depth 5 in 9
+Move X moves from <1,1> to <3,1>  at depth 6 in 21
+Move X moves from <1,1> to <3,1>  at depth 7 in 50
+Move X moves from <1,1> to <3,1>  at depth 8 in 89
+Move X moves from <1,1> to <3,1>  at depth 9 in 155
+Move X moves from <1,1> to <3,1>  at depth 10 in 234
+Move X moves from <1,1> to <3,1>  at depth 11 in 346
+Move X moves from <1,1> to <3,1>  at depth 12 in 469
+Move X moves from <1,1> to <3,1>  at depth 13 in 620
+Move X moves from <1,1> to <3,1>  at depth 14 in 812
+Move X moves from <1,1> to <3,1>  at depth 15 in 969
+Explored whole move tree. Move X moves from <1,1> to <3,1>  at depth 16 in 1124
+X moves from <1,1> to <3,1> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . O . O . O 
+2	. . . . . X . . 
+3	X . . . . O X O 
+4	. . . X . . . X 
+5	. O . . . O . O 
+6	. . O . . X . X 
+7	X . X . . . . O 
+8	O . O . O . . . 
+
+O moves from <8,1> to <6,1> 
+O moves from <8,1> to <6,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . . O . O . O 
+2	. . . . . X . . 
+3	X . . . . O X O 
+4	. . . X . . . X 
+5	. O . . . O . O 
+6	O . O . . X . X 
+7	. . X . . . . O 
+8	. . O . O . . . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 0
+Move X moves from <6,8> to <8,8>  at depth 3 in 1
+Move X moves from <6,8> to <8,8>  at depth 4 in 3
+Move X moves from <6,6> to <4,6>  at depth 5 in 7
+Move X moves from <6,6> to <4,6>  at depth 6 in 10
+Move X moves from <3,7> to <3,5>  at depth 7 in 17
+Move X moves from <3,7> to <3,5>  at depth 8 in 25
+Move X moves from <3,7> to <3,5>  at depth 9 in 36
+Move X moves from <3,7> to <3,5>  at depth 10 in 51
+Move X moves from <3,7> to <3,5>  at depth 11 in 66
+Move X moves from <3,7> to <3,5>  at depth 12 in 81
+Move X moves from <3,7> to <3,5>  at depth 13 in 99
+Explored whole move tree. Move X moves from <3,7> to <3,5>  at depth 14 in 115
+X moves from <3,7> to <3,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . O . O . O 
+2	. . . . . X . . 
+3	X . . . X . . O 
+4	. . . X . . . X 
+5	. O . . . O . O 
+6	O . O . . X . X 
+7	. . X . . . . O 
+8	. . O . O . . . 
+
+O moves from <5,6> to <7,6> 
+O moves from <5,6> to <7,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . . O . O . O 
+2	. . . . . X . . 
+3	X . . . X . . O 
+4	. . . X . . . X 
+5	. O . . . . . O 
+6	O . O . . . . X 
+7	. . X . . O . O 
+8	. . O . O . . . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 0
+Move X moves from <4,8> to <2,8>  at depth 3 in 0
+Move X moves from <4,8> to <2,8>  at depth 4 in 0
+Move X moves from <4,8> to <2,8>  at depth 5 in 1
+Move X moves from <4,8> to <2,8>  at depth 6 in 1
+Move X moves from <4,8> to <2,8>  at depth 7 in 3
+Move X moves from <4,8> to <2,8>  at depth 8 in 5
+Move X moves from <4,8> to <2,8>  at depth 9 in 8
+Move X moves from <4,8> to <2,8>  at depth 10 in 11
+Move X moves from <4,8> to <2,8>  at depth 11 in 14
+Explored whole move tree. Move X moves from <4,8> to <2,8>  at depth 12 in 17
+X moves from <4,8> to <2,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . O . O . O 
+2	. . . . . X . X 
+3	X . . . X . . . 
+4	. . . X . . . . 
+5	. O . . . . . O 
+6	O . O . . . . X 
+7	. . X . . O . O 
+8	. . O . O . . . 
+
+O moves from <1,6> to <3,6> 
+O moves from <1,6> to <3,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . O 
+2	. . . . . . . X 
+3	X . . . X O . . 
+4	. . . X . . . . 
+5	. O . . . . . O 
+6	O . O . . . . X 
+7	. . X . . O . O 
+8	. . O . O . . . 
+
+Move X moves from <3,5> to <3,7>  at depth 2 in 0
+Move X moves from <3,5> to <3,7>  at depth 3 in 0
+Move X moves from <3,5> to <3,7>  at depth 4 in 0
+Move X moves from <3,5> to <3,7>  at depth 5 in 1
+Move X moves from <3,5> to <3,7>  at depth 6 in 2
+Move X moves from <3,5> to <3,7>  at depth 7 in 4
+Move X moves from <3,5> to <3,7>  at depth 8 in 5
+Move X moves from <3,5> to <3,7>  at depth 9 in 7
+Explored whole move tree. Move X moves from <3,5> to <3,7>  at depth 10 in 10
+X moves from <3,5> to <3,7> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . O 
+2	. . . . . . . X 
+3	X . . . . . X . 
+4	. . . X . . . . 
+5	. O . . . . . O 
+6	O . O . . . . X 
+7	. . X . . O . O 
+8	. . O . O . . . 
+
+O moves from <1,8> to <3,8> 
+O moves from <1,8> to <3,8> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . . 
+2	. . . . . . . . 
+3	X . . . . . X O 
+4	. . . X . . . . 
+5	. O . . . . . O 
+6	O . O . . . . X 
+7	. . X . . O . O 
+8	. . O . O . . . 
+
+Move X moves from <6,8> to <4,8> to <2,8>  at depth 2 in 0
+Move X moves from <6,8> to <4,8> to <2,8>  at depth 3 in 0
+Move X moves from <6,8> to <4,8> to <2,8>  at depth 4 in 0
+Explored whole move tree. Move X moves from <6,8> to <4,8>  at depth 5 in 0
+X moves from <6,8> to <4,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . . 
+2	. . . . . . . . 
+3	X . . . . . X O 
+4	. . . X . . . X 
+5	. O . . . . . . 
+6	O . O . . . . . 
+7	. . X . . O . O 
+8	. . O . O . . . 
+
+O moves from <3,8> to <3,6> 
+O moves from <3,8> to <3,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . . 
+2	. . . . . . . . 
+3	X . . . . O . . 
+4	. . . X . . . X 
+5	. O . . . . . . 
+6	O . O . . . . . 
+7	. . X . . O . O 
+8	. . O . O . . . 
+
+Move X moves from <7,3> to <5,3>  at depth 2 in 0
+Explored whole move tree. Move X moves from <7,3> to <5,3>  at depth 3 in 0
+X moves from <7,3> to <5,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . . 
+2	. . . . . . . . 
+3	X . . . . O . . 
+4	. . . X . . . X 
+5	. O X . . . . . 
+6	O . . . . . . . 
+7	. . . . . O . O 
+8	. . O . O . . . 
+
+O moves from <5,2> to <5,4> 
+O moves from <5,2> to <5,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . . 
+2	. . . . . . . . 
+3	X . . . . O . . 
+4	. . . X . . . X 
+5	. . . O . . . . 
+6	O . . . . . . . 
+7	. . . . . O . O 
+8	. . O . O . . . 
+
+Explored whole move tree. Move X moves from <4,4> to <6,4>  at depth 2 in 0
+X moves from <4,4> to <6,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . O . . . . 
+2	. . . . . . . . 
+3	X . . . . O . . 
+4	. . . . . . . X 
+5	. . . . . . . . 
+6	O . . X . . . . 
+7	. . . . . O . O 
+8	. . O . O . . . 
+
+X has won!
+[24, 23]
+[55852, 1]
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <4,2> to <4,4>  at depth 2 in 6
+Move X moves from <4,2> to <4,4>  at depth 3 in 17
+Move X moves from <4,2> to <4,4>  at depth 4 in 25
+Move X moves from <4,2> to <4,4>  at depth 5 in 50
+Move X moves from <4,2> to <4,4>  at depth 6 in 209
+Move X moves from <4,2> to <4,4>  at depth 7 in 632
+Move X moves from <4,2> to <4,4>  at depth 8 in 3178
+X moves from <4,2> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <4,7> to <4,5> to <4,3> 
+O moves from <4,7> to <4,5> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <6,2> to <4,2>  at depth 2 in 1
+Move X moves from <6,4> to <4,4>  at depth 3 in 5
+Move X moves from <6,2> to <4,2>  at depth 4 in 31
+Move X moves from <6,2> to <4,2>  at depth 5 in 135
+Move X moves from <6,2> to <4,2>  at depth 6 in 637
+Move X moves from <6,2> to <4,2>  at depth 7 in 2363
+Cutoff mid-depth 8
+X moves from <6,2> to <4,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . . . X 
+5	X . X O X O X O 
+6	O . O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <6,7> to <4,7> 
+O moves from <6,7> to <4,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . . O X 
+5	X . X O X O . O 
+6	O . O X O X . X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <4,2> to <4,4>  at depth 2 in 2
+Move X moves from <4,2> to <4,4>  at depth 3 in 11
+Move X moves from <4,2> to <4,4>  at depth 4 in 61
+Move X moves from <8,2> to <6,2>  at depth 5 in 257
+Move X moves from <4,2> to <4,4>  at depth 6 in 1107
+Cutoff mid-depth 7
+X moves from <4,2> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . . X . . O X 
+5	X . X O X O . O 
+6	O . O X O X . X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <2,3> to <4,3> 
+O moves from <2,3> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O . O X O X O 
+4	O . O X . . O X 
+5	X . X O X O . O 
+6	O . O X O X . X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <3,7> to <5,7>  at depth 2 in 2
+Move X moves from <5,3> to <3,3>  at depth 3 in 17
+Move X moves from <5,3> to <3,3>  at depth 4 in 99
+Move X moves from <5,3> to <3,3>  at depth 5 in 526
+Move X moves from <5,3> to <3,3>  at depth 6 in 2546
+Cutoff mid-depth 7
+X moves from <5,3> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O X O X O X O 
+4	O . . X . . O X 
+5	X . . O X O . O 
+6	O . O X O X . X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <6,5> to <6,7> 
+O moves from <6,5> to <6,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O X O X O X O 
+4	O . . X . . O X 
+5	X . . O X O . O 
+6	O . O X . . O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <7,3> to <5,3>  at depth 2 in 3
+Move X moves from <7,3> to <5,3>  at depth 3 in 20
+Move X moves from <7,3> to <5,3>  at depth 4 in 115
+Move X moves from <8,2> to <6,2>  at depth 5 in 649
+Move X moves from <3,7> to <5,7>  at depth 6 in 2954
+Cutoff mid-depth 7
+X moves from <3,7> to <5,7> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O X O X O . O 
+4	O . . X . . . X 
+5	X . . O X O X O 
+6	O . O X . . O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <2,5> to <2,3> 
+O moves from <2,5> to <2,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O . . X O X 
+3	X O X O X O . O 
+4	O . . X . . . X 
+5	X . . O X O X O 
+6	O . O X . . O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <1,7> to <3,7>  at depth 2 in 3
+Move X moves from <1,7> to <3,7>  at depth 3 in 21
+Move X moves from <1,7> to <3,7>  at depth 4 in 101
+Move X moves from <1,7> to <3,7>  at depth 5 in 536
+Move X moves from <1,7> to <3,7>  at depth 6 in 2400
+Cutoff mid-depth 7
+X moves from <1,7> to <3,7> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . . X . X 
+3	X O X O X O X O 
+4	O . . X . . . X 
+5	X . . O X O X O 
+6	O . O X . . O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <8,5> to <6,5> 
+O moves from <8,5> to <6,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . . X . X 
+3	X O X O X O X O 
+4	O . . X . . . X 
+5	X . . O X O X O 
+6	O . O X O . O X 
+7	X O X O . O X O 
+8	O X O X . X O X 
+
+Move X moves from <2,2> to <2,4>  at depth 2 in 3
+Move X moves from <8,2> to <6,2>  at depth 3 in 24
+Move X moves from <8,2> to <6,2>  at depth 4 in 169
+Move X moves from <8,2> to <6,2>  at depth 5 in 866
+Cutoff mid-depth 6
+X moves from <8,2> to <6,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . . X . X 
+3	X O X O X O X O 
+4	O . . X . . . X 
+5	X . . O X O X O 
+6	O X O X O . O X 
+7	X . X O . O X O 
+8	O . O X . X O X 
+
+O moves from <6,5> to <4,5> to <2,5> 
+O moves from <6,5> to <4,5> to <2,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X O . O X O 
+4	O . . X . . . X 
+5	X . . O . O X O 
+6	O X O X . . O X 
+7	X . X O . O X O 
+8	O . O X . X O X 
+
+Move X moves from <5,7> to <5,5>  at depth 2 in 3
+Move X moves from <8,4> to <8,2>  at depth 3 in 31
+Move X moves from <8,4> to <8,2>  at depth 4 in 205
+Move X moves from <5,7> to <5,5>  at depth 5 in 1254
+Cutoff mid-depth 6
+X moves from <5,7> to <5,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X O . O X O 
+4	O . . X . . . X 
+5	X . . O X . . O 
+6	O X O X . . O X 
+7	X . X O . O X O 
+8	O . O X . X O X 
+
+O moves from <5,4> to <5,6> 
+O moves from <5,4> to <5,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X O . O X O 
+4	O . . X . . . X 
+5	X . . . . O . O 
+6	O X O X . . O X 
+7	X . X O . O X O 
+8	O . O X . X O X 
+
+Move X moves from <1,5> to <3,5>  at depth 2 in 3
+Move X moves from <1,5> to <3,5>  at depth 3 in 25
+Move X moves from <1,5> to <3,5>  at depth 4 in 129
+Move X moves from <7,3> to <5,3>  at depth 5 in 704
+Move X moves from <7,3> to <5,3>  at depth 6 in 2775
+Cutoff mid-depth 7
+X moves from <7,3> to <5,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X O . O X O 
+4	O . . X . . . X 
+5	X . X . . O . O 
+6	O X . X . . O X 
+7	X . . O . O X O 
+8	O . O X . X O X 
+
+O moves from <8,7> to <8,5> 
+O moves from <8,7> to <8,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X O . O X O 
+4	O . . X . . . X 
+5	X . X . . O . O 
+6	O X . X . . O X 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <6,8> to <6,6>  at depth 2 in 2
+Move X moves from <6,8> to <6,6>  at depth 3 in 20
+Move X moves from <6,8> to <6,6>  at depth 4 in 132
+Move X moves from <6,8> to <6,6>  at depth 5 in 756
+Cutoff mid-depth 6
+X moves from <6,8> to <6,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X O . O X O 
+4	O . . X . . . X 
+5	X . X . . O . O 
+6	O X . X . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <3,4> to <5,4> 
+O moves from <3,4> to <5,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X . . O X O 
+4	O . . . . . . X 
+5	X . X O . O . O 
+6	O X . X . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <6,4> to <4,4>  at depth 2 in 3
+Move X moves from <6,4> to <4,4>  at depth 3 in 19
+Move X moves from <6,4> to <4,4>  at depth 4 in 119
+Move X moves from <6,4> to <4,4>  at depth 5 in 550
+Move X moves from <6,4> to <4,4>  at depth 6 in 2328
+Cutoff mid-depth 7
+X moves from <6,4> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X O . O X . X 
+3	X O X . . O X O 
+4	O . . X . . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <2,3> to <4,3> 
+O moves from <2,3> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X . . O X . X 
+3	X O . . . O X O 
+4	O . O X . . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <2,2> to <4,2>  at depth 2 in 2
+Move X moves from <2,2> to <4,2>  at depth 3 in 16
+Move X moves from <1,5> to <1,7>  at depth 4 in 69
+Move X moves from <1,5> to <3,5>  at depth 5 in 376
+Move X moves from <2,6> to <2,4>  at depth 6 in 1253
+Cutoff mid-depth 7
+X moves from <2,6> to <2,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X . X . . . X 
+3	X O . . . O X O 
+4	O . O X . . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <4,3> to <4,5> 
+O moves from <4,3> to <4,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O . O 
+2	O X . X . . . X 
+3	X O . . . O X O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <1,5> to <1,7>  at depth 2 in 1
+Move X moves from <1,5> to <1,7>  at depth 3 in 11
+Move X moves from <1,5> to <1,7>  at depth 4 in 40
+Move X moves from <1,5> to <1,7>  at depth 5 in 177
+Move X moves from <1,5> to <1,7>  at depth 6 in 575
+Move X moves from <1,5> to <1,7>  at depth 7 in 2601
+Cutoff mid-depth 8
+X moves from <1,5> to <1,7> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . . X O 
+2	O X . X . . . X 
+3	X O . . . O X O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <1,4> to <3,4> 
+O moves from <1,4> to <3,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X . . . X O 
+2	O X . . . . . X 
+3	X O . O . O X O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <4,8> to <6,8>  at depth 2 in 1
+Move X moves from <3,7> to <3,5>  at depth 3 in 10
+Move X moves from <4,8> to <6,8>  at depth 4 in 38
+Move X moves from <3,1> to <3,3>  at depth 5 in 193
+Move X moves from <3,1> to <3,3>  at depth 6 in 645
+Move X moves from <3,1> to <3,3>  at depth 7 in 2922
+Cutoff mid-depth 8
+X moves from <3,1> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X . . . X O 
+2	O X . . . . . X 
+3	. . X O . O X O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <1,2> to <1,4> 
+O moves from <1,2> to <1,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . O . . X O 
+2	O X . . . . . X 
+3	. . X O . O X O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <3,3> to <3,5>  at depth 2 in 1
+Move X moves from <1,1> to <3,1>  at depth 3 in 8
+Move X moves from <3,7> to <3,5>  at depth 4 in 34
+Move X moves from <3,3> to <3,5>  at depth 5 in 175
+Move X moves from <3,7> to <3,5>  at depth 6 in 613
+Move X moves from <3,7> to <3,5>  at depth 7 in 2883
+Cutoff mid-depth 8
+X moves from <3,7> to <3,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . O . . X O 
+2	O X . . . . . X 
+3	. . X O X . . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <2,1> to <2,3> 
+O moves from <2,1> to <2,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . O . . X O 
+2	. . O . . . . X 
+3	. . X O X . . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <3,3> to <1,3>  at depth 2 in 1
+Move X moves from <3,3> to <1,3>  at depth 3 in 8
+Move X moves from <3,3> to <1,3>  at depth 4 in 39
+Move X moves from <3,3> to <1,3>  at depth 5 in 146
+Move X moves from <3,3> to <1,3>  at depth 6 in 476
+Move X moves from <3,3> to <1,3>  at depth 7 in 1582
+Cutoff mid-depth 8
+X moves from <3,3> to <1,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X O . . X O 
+2	. . . . . . . X 
+3	. . . O X . . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <3,4> to <3,6> 
+O moves from <3,4> to <3,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X O . . X O 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <5,1> to <3,1>  at depth 2 in 1
+Move X moves from <1,3> to <1,5>  at depth 3 in 5
+Move X moves from <1,3> to <1,5>  at depth 4 in 15
+Move X moves from <1,3> to <1,5>  at depth 5 in 61
+Move X moves from <1,3> to <1,5>  at depth 6 in 159
+Move X moves from <1,3> to <1,5>  at depth 7 in 558
+Move X moves from <1,3> to <1,5>  at depth 8 in 1361
+Cutoff mid-depth 9
+X moves from <1,3> to <1,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . X . X O 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <1,8> to <1,6> 
+O moves from <1,8> to <1,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . X O . . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <1,5> to <1,7>  at depth 2 in 1
+Move X moves from <1,5> to <1,7>  at depth 3 in 4
+Move X moves from <1,5> to <1,7>  at depth 4 in 13
+Move X moves from <1,5> to <1,7>  at depth 5 in 46
+Move X moves from <1,5> to <1,7>  at depth 6 in 122
+Move X moves from <1,5> to <1,7>  at depth 7 in 365
+Move X moves from <1,5> to <1,7>  at depth 8 in 879
+Move X moves from <1,5> to <1,7>  at depth 9 in 2144
+Cutoff mid-depth 10
+X moves from <1,5> to <1,7> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	O X . . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+O moves from <6,1> to <6,3> 
+O moves from <6,1> to <6,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	O . . . O . . X 
+5	X . X . . O . O 
+6	. . O . . X . . 
+7	X . . O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <5,1> to <3,1>  at depth 2 in 1
+Move X moves from <4,8> to <6,8>  at depth 3 in 5
+Move X moves from <4,8> to <6,8>  at depth 4 in 16
+Move X moves from <4,8> to <6,8>  at depth 5 in 59
+Move X moves from <5,1> to <3,1>  at depth 6 in 153
+Move X moves from <8,4> to <8,6>  at depth 7 in 460
+Move X moves from <5,3> to <7,3>  at depth 8 in 1030
+Move X moves from <5,3> to <7,3>  at depth 9 in 2225
+Cutoff mid-depth 10
+X moves from <5,3> to <7,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	O . . . O . . X 
+5	X . . . . O . O 
+6	. . . . . X . . 
+7	X . X O . O X O 
+8	O . O X O . . X 
+
+O moves from <4,1> to <6,1> 
+O moves from <4,1> to <6,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	. . . . O . . X 
+5	. . . . . O . O 
+6	O . . . . X . . 
+7	X . X O . O X O 
+8	O . O X O . . X 
+
+Move X moves from <7,1> to <5,1>  at depth 2 in 1
+Move X moves from <4,8> to <6,8>  at depth 3 in 3
+Move X moves from <4,8> to <6,8>  at depth 4 in 9
+Move X moves from <8,4> to <8,6>  at depth 5 in 32
+Move X moves from <8,4> to <8,6>  at depth 6 in 76
+Move X moves from <8,4> to <8,6>  at depth 7 in 190
+Move X moves from <8,4> to <8,6>  at depth 8 in 371
+Move X moves from <8,4> to <8,6>  at depth 9 in 697
+Move X moves from <8,4> to <8,6>  at depth 10 in 1169
+Move X moves from <8,4> to <8,6>  at depth 11 in 1744
+Move X moves from <8,4> to <8,6>  at depth 12 in 2203
+Move X moves from <8,4> to <8,6>  at depth 13 in 2610
+Move X moves from <8,4> to <8,6>  at depth 14 in 2989
+Cutoff mid-depth 15
+X moves from <8,4> to <8,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	. . . . O . . X 
+5	. . . . . O . O 
+6	O . . . . X . . 
+7	X . X O . O X O 
+8	O . O . . X . X 
+
+O moves from <8,3> to <6,3> 
+O moves from <8,3> to <6,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	. . . . O . . X 
+5	. . . . . O . O 
+6	O . O . . X . . 
+7	X . . O . O X O 
+8	O . . . . X . X 
+
+Move X moves from <6,6> to <4,6>  at depth 2 in 0
+Move X moves from <6,6> to <4,6>  at depth 3 in 1
+Move X moves from <6,6> to <4,6>  at depth 4 in 2
+Move X moves from <6,6> to <4,6>  at depth 5 in 6
+Move X moves from <6,6> to <4,6>  at depth 6 in 12
+Move X moves from <7,7> to <7,5>  at depth 7 in 22
+Move X moves from <6,6> to <4,6>  at depth 8 in 40
+Move X moves from <6,6> to <4,6>  at depth 9 in 61
+Move X moves from <6,6> to <4,6>  at depth 10 in 84
+Move X moves from <6,6> to <4,6>  at depth 11 in 104
+Move X moves from <6,6> to <4,6>  at depth 12 in 123
+Explored whole move tree. Move X moves from <6,6> to <4,6>  at depth 13 in 143
+X moves from <6,6> to <4,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X . 
+2	. . . . . . . X 
+3	. . . . . O . O 
+4	. . . . O X . X 
+5	. . . . . . . O 
+6	O . O . . . . . 
+7	X . . O . O X O 
+8	O . . . . X . X 
+
+O moves from <3,8> to <1,8> 
+O moves from <3,8> to <1,8> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . O . . 
+4	. . . . O X . X 
+5	. . . . . . . O 
+6	O . O . . . . . 
+7	X . . O . O X O 
+8	O . . . . X . X 
+
+Move X moves from <4,6> to <2,6>  at depth 2 in 1
+Move X moves from <4,6> to <2,6>  at depth 3 in 2
+Move X moves from <4,6> to <4,4>  at depth 4 in 3
+Move X moves from <4,6> to <4,4>  at depth 5 in 7
+Move X moves from <4,6> to <4,4>  at depth 6 in 12
+Move X moves from <7,7> to <7,5> to <7,3>  at depth 7 in 19
+Move X moves from <7,7> to <7,5> to <7,3>  at depth 8 in 28
+Move X moves from <7,7> to <7,5> to <7,3>  at depth 9 in 38
+Move X moves from <7,7> to <7,5> to <7,3>  at depth 10 in 46
+Move X moves from <7,7> to <7,5> to <7,3>  at depth 11 in 53
+Explored whole move tree. Move X moves from <7,7> to <7,5> to <7,3>  at depth 12 in 61
+X moves from <7,7> to <7,5> to <7,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . O . . 
+4	. . . . O X . X 
+5	. . . . . . . O 
+6	O . O . . . . . 
+7	X . X . . . . O 
+8	O . . . . X . X 
+
+O moves from <4,5> to <4,7> 
+O moves from <4,5> to <4,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . O . . 
+4	. . . . . . O X 
+5	. . . . . . . O 
+6	O . O . . . . . 
+7	X . X . . . . O 
+8	O . . . . X . X 
+
+Move X moves from <4,8> to <4,6>  at depth 2 in 0
+Move X moves from <4,8> to <4,6>  at depth 3 in 0
+Move X moves from <4,8> to <4,6>  at depth 4 in 0
+Move X moves from <7,3> to <5,3>  at depth 5 in 1
+Move X moves from <7,3> to <5,3>  at depth 6 in 2
+Move X moves from <4,8> to <4,6>  at depth 7 in 2
+Explored whole move tree. Move X moves from <4,8> to <4,6>  at depth 8 in 3
+X moves from <4,8> to <4,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . O . . 
+4	. . . . . X . . 
+5	. . . . . . . O 
+6	O . O . . . . . 
+7	X . X . . . . O 
+8	O . . . . X . X 
+
+O moves from <3,6> to <5,6> 
+O moves from <3,6> to <5,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . . . . 
+4	. . . . . . . . 
+5	. . . . . O . O 
+6	O . O . . . . . 
+7	X . X . . . . O 
+8	O . . . . X . X 
+
+Move X moves from <7,3> to <5,3>  at depth 2 in 0
+Move X moves from <7,3> to <5,3>  at depth 3 in 0
+Move X moves from <7,3> to <5,3>  at depth 4 in 1
+Explored whole move tree. Move X moves from <8,8> to <6,8>  at depth 5 in 1
+X moves from <8,8> to <6,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . . . . 
+4	. . . . . . . . 
+5	. . . . . O . O 
+6	O . O . . . . X 
+7	X . X . . . . . 
+8	O . . . . X . . 
+
+O moves from <5,8> to <7,8> 
+O moves from <5,8> to <7,8> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . . . . 
+4	. . . . . . . . 
+5	. . . . . O . . 
+6	O . O . . . . . 
+7	X . X . . . . O 
+8	O . . . . X . . 
+
+Move X moves from <7,3> to <5,3>  at depth 2 in 0
+Explored whole move tree. Move X moves from <7,3> to <5,3>  at depth 3 in 0
+X moves from <7,3> to <5,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . . X O 
+2	. . . . . . . . 
+3	. . . . . . . . 
+4	. . . . . . . . 
+5	. . X . . O . . 
+6	O . . . . . . . 
+7	X . . . . . . O 
+8	O . . . . X . . 
+
+O moves from <1,8> to <1,6> 
+O moves from <1,8> to <1,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O . . 
+2	. . . . . . . . 
+3	. . . . . . . . 
+4	. . . . . . . . 
+5	. . X . . O . . 
+6	O . . . . . . . 
+7	X . . . . . . O 
+8	O . . . . X . . 
+
+Explored whole move tree. Move X moves from <7,1> to <5,1>  at depth 2 in 0
+X moves from <7,1> to <5,1> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O . . 
+2	. . . . . . . . 
+3	. . . . . . . . 
+4	. . . . . . . . 
+5	X . X . . O . . 
+6	. . . . . . . . 
+7	. . . . . . . O 
+8	O . . . . X . . 
+
+X has won!
+[26, 25]
+[64616, 0]
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <4,2> to <4,4>  at depth 2 in 1
+Move X moves from <4,2> to <4,4>  at depth 3 in 2
+Move X moves from <4,2> to <4,4>  at depth 4 in 11
+Move X moves from <4,2> to <4,4>  at depth 5 in 36
+Move X moves from <4,2> to <4,4>  at depth 6 in 197
+Move X moves from <4,2> to <4,4>  at depth 7 in 620
+Move X moves from <4,2> to <4,4>  at depth 8 in 3167
+X moves from <4,2> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <2,5> to <4,5> 
+O moves from <2,5> to <4,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X . X O X 
+3	X O X O . O X O 
+4	O . . X O X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <5,5> to <3,5>  at depth 2 in 1
+Move X moves from <5,5> to <3,5>  at depth 3 in 4
+Move X moves from <5,5> to <3,5>  at depth 4 in 25
+Move X moves from <5,5> to <3,5>  at depth 5 in 97
+Move X moves from <5,5> to <3,5>  at depth 6 in 491
+Move X moves from <5,5> to <3,5>  at depth 7 in 1728
+Cutoff mid-depth 8
+X moves from <5,5> to <3,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X . X O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <2,3> to <2,5> 
+O moves from <2,3> to <2,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . . O X O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <2,6> to <2,4>  at depth 2 in 2
+Move X moves from <2,6> to <2,4>  at depth 3 in 7
+Move X moves from <2,6> to <2,4>  at depth 4 in 41
+Move X moves from <2,6> to <2,4>  at depth 5 in 160
+Move X moves from <2,6> to <2,4>  at depth 6 in 786
+Move X moves from <2,6> to <2,4>  at depth 7 in 2951
+Cutoff mid-depth 8
+X moves from <2,6> to <2,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X . . O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <2,1> to <2,3> 
+O moves from <2,1> to <2,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . O X . . O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <2,4> to <2,2>  at depth 2 in 2
+Move X moves from <2,4> to <2,2>  at depth 3 in 7
+Move X moves from <2,4> to <2,2>  at depth 4 in 40
+Move X moves from <2,4> to <2,2>  at depth 5 in 151
+Move X moves from <2,4> to <2,2>  at depth 6 in 770
+Move X moves from <2,4> to <2,2>  at depth 7 in 2828
+Cutoff mid-depth 8
+X moves from <2,4> to <2,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . . O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <4,7> to <4,5> 
+O moves from <4,7> to <4,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . . O X 
+3	X O X O X O X O 
+4	O . . X O . . X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <2,8> to <2,6>  at depth 2 in 2
+Move X moves from <2,8> to <2,6>  at depth 3 in 12
+Move X moves from <2,8> to <2,6>  at depth 4 in 67
+Move X moves from <2,8> to <2,6>  at depth 5 in 291
+Move X moves from <2,8> to <2,6>  at depth 6 in 1341
+Cutoff mid-depth 7
+X moves from <2,8> to <2,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . X . . 
+3	X O X O X O X O 
+4	O . . X O . . X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <4,5> to <4,3> 
+O moves from <4,5> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . X . . 
+3	X O X O X O X O 
+4	O . O . . . . X 
+5	X O X O . O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <6,2> to <4,2>  at depth 2 in 1
+Move X moves from <4,8> to <2,8>  at depth 3 in 9
+Move X moves from <4,8> to <2,8>  at depth 4 in 34
+Move X moves from <6,6> to <4,6>  at depth 5 in 152
+Move X moves from <6,6> to <4,6>  at depth 6 in 637
+Move X moves from <7,5> to <5,5>  at depth 7 in 2849
+Cutoff mid-depth 8
+X moves from <7,5> to <5,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . X . . 
+3	X O X O X O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O X . X O X 
+7	X O X O . O X O 
+8	O X O X O X O X 
+
+O moves from <6,7> to <6,5> 
+O moves from <6,7> to <6,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . X . . 
+3	X O X O X O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O X O . . X 
+7	X O X O . O X O 
+8	O X O X O X O X 
+
+Move X moves from <6,4> to <6,6>  at depth 2 in 3
+Move X moves from <6,4> to <6,6>  at depth 3 in 16
+Move X moves from <6,4> to <6,6>  at depth 4 in 79
+Move X moves from <6,4> to <6,6>  at depth 5 in 396
+Move X moves from <6,4> to <6,6>  at depth 6 in 1613
+Cutoff mid-depth 7
+X moves from <6,4> to <6,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . X . . 
+3	X O X O X O X O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O . . X . X 
+7	X O X O . O X O 
+8	O X O X O X O X 
+
+O moves from <8,7> to <6,7> to <4,7> 
+O moves from <8,7> to <6,7> to <4,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . X . . 
+3	X O X O X O X O 
+4	O . O . . . O X 
+5	X O X O X O . O 
+6	O X O . . X . X 
+7	X O X O . O . O 
+8	O X O X O X . X 
+
+Move X moves from <3,7> to <5,7>  at depth 2 in 1
+Move X moves from <3,7> to <5,7>  at depth 3 in 13
+Move X moves from <3,7> to <5,7>  at depth 4 in 63
+Move X moves from <3,7> to <5,7>  at depth 5 in 345
+Move X moves from <3,7> to <5,7>  at depth 6 in 1369
+Cutoff mid-depth 7
+X moves from <3,7> to <5,7> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X . . . X . . 
+3	X O X O X O . O 
+4	O . O . . . . X 
+5	X O X O X O X O 
+6	O X O . . X . X 
+7	X O X O . O . O 
+8	O X O X O X . X 
+
+O moves from <4,3> to <2,3> 
+O moves from <4,3> to <2,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. X O . . X . . 
+3	X O . O X O . O 
+4	O . . . . . . X 
+5	X O X O X O X O 
+6	O X O . . X . X 
+7	X O X O . O . O 
+8	O X O X O X . X 
+
+Move X moves from <2,2> to <2,4>  at depth 2 in 2
+Move X moves from <2,2> to <2,4>  at depth 3 in 13
+Move X moves from <2,2> to <2,4>  at depth 4 in 50
+Move X moves from <2,2> to <2,4>  at depth 5 in 247
+Move X moves from <2,2> to <2,4>  at depth 6 in 872
+Cutoff mid-depth 7
+X moves from <2,2> to <2,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X O . O X O . O 
+4	O . . . . . . X 
+5	X O X O X O X O 
+6	O X O . . X . X 
+7	X O X O . O . O 
+8	O X O X O X . X 
+
+O moves from <6,3> to <4,3> 
+O moves from <6,3> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X O . O X O . O 
+4	O . O . . . . X 
+5	X O . O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	O X O X O X . X 
+
+Move X moves from <4,8> to <2,8>  at depth 2 in 2
+Move X moves from <4,8> to <2,8>  at depth 3 in 13
+Move X moves from <3,1> to <3,3>  at depth 4 in 51
+Move X moves from <3,1> to <3,3>  at depth 5 in 262
+Move X moves from <3,1> to <3,3>  at depth 6 in 884
+Cutoff mid-depth 7
+X moves from <3,1> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	. . X O X O . O 
+4	O . O . . . . X 
+5	X O . O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	O X O X O X . X 
+
+O moves from <8,5> to <8,7> 
+O moves from <8,5> to <8,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	. . X O X O . O 
+4	O . O . . . . X 
+5	X O . O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	O X O X . . O X 
+
+Move X moves from <3,3> to <5,3>  at depth 2 in 2
+Move X moves from <3,3> to <5,3>  at depth 3 in 16
+Move X moves from <3,3> to <5,3>  at depth 4 in 60
+Move X moves from <8,8> to <8,6>  at depth 5 in 369
+Move X moves from <3,3> to <5,3>  at depth 6 in 1281
+Cutoff mid-depth 7
+X moves from <3,3> to <5,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	. . . O X O . O 
+4	O . . . . . . X 
+5	X O X O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	O X O X . . O X 
+
+O moves from <8,3> to <8,5> 
+O moves from <8,3> to <8,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	. . . O X O . O 
+4	O . . . . . . X 
+5	X O X O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	O X . . O . O X 
+
+Move X moves from <5,1> to <3,1>  at depth 2 in 1
+Move X moves from <8,8> to <8,6> to <8,4>  at depth 3 in 11
+Move X moves from <5,1> to <3,1>  at depth 4 in 35
+Move X moves from <5,1> to <3,1>  at depth 5 in 199
+Move X moves from <8,8> to <8,6>  at depth 6 in 579
+Move X moves from <5,1> to <3,1>  at depth 7 in 2851
+Cutoff mid-depth 8
+X moves from <5,1> to <3,1> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	O X . . O . O X 
+
+O moves from <8,1> to <8,3> 
+O moves from <8,1> to <8,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	. . O . O . O X 
+
+Move X moves from <8,8> to <8,6> to <8,4>  at depth 2 in 1
+Move X moves from <7,1> to <5,1>  at depth 3 in 16
+Move X moves from <7,1> to <5,1>  at depth 4 in 48
+Move X moves from <8,8> to <8,6>  at depth 5 in 274
+Move X moves from <8,8> to <8,6>  at depth 6 in 780
+Cutoff mid-depth 7
+X moves from <8,8> to <8,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	. . O . O X . . 
+
+O moves from <8,5> to <8,7> 
+O moves from <8,5> to <8,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	O X . . . X . X 
+7	X O X O . O . O 
+8	. . O . . . O . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 1
+Move X moves from <7,1> to <5,1>  at depth 3 in 14
+Move X moves from <7,1> to <5,1>  at depth 4 in 43
+Move X moves from <6,2> to <8,2>  at depth 5 in 261
+Move X moves from <6,2> to <8,2>  at depth 6 in 745
+Cutoff mid-depth 7
+X moves from <6,2> to <8,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	O . . . . X . X 
+7	X . X O . O . O 
+8	. X O . . . O . 
+
+O moves from <7,4> to <7,2> 
+O moves from <7,4> to <7,2> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	O . . . . X . X 
+7	X O . . . O . O 
+8	. X O . . . O . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 1
+Move X moves from <8,2> to <8,4>  at depth 3 in 6
+Move X moves from <8,2> to <8,4>  at depth 4 in 16
+Move X moves from <8,2> to <8,4>  at depth 5 in 69
+Move X moves from <8,2> to <8,4>  at depth 6 in 177
+Move X moves from <8,2> to <8,4>  at depth 7 in 705
+Move X moves from <8,2> to <8,4>  at depth 8 in 1836
+Cutoff mid-depth 9
+X moves from <8,2> to <8,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	O . . . . X . X 
+7	X O . . . O . O 
+8	. . . X . . O . 
+
+O moves from <6,1> to <8,1> 
+O moves from <6,1> to <8,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . O X O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+Move X moves from <5,3> to <5,1>  at depth 2 in 0
+Move X moves from <5,3> to <5,1>  at depth 3 in 1
+Move X moves from <5,3> to <5,1>  at depth 4 in 4
+Move X moves from <5,3> to <5,1>  at depth 5 in 17
+Move X moves from <5,3> to <5,1>  at depth 6 in 43
+Move X moves from <5,3> to <5,1>  at depth 7 in 140
+Move X moves from <5,3> to <5,1>  at depth 8 in 301
+Move X moves from <2,4> to <4,4>  at depth 9 in 824
+Move X moves from <2,4> to <4,4>  at depth 10 in 1609
+Cutoff mid-depth 11
+X moves from <2,4> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . . . X . . 
+3	X . . . X O . O 
+4	. . . X . . . X 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+O moves from <3,6> to <3,4> 
+O moves from <3,6> to <3,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . . . X . . 
+3	X . . O . . . O 
+4	. . . X . . . X 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 1
+Move X moves from <5,3> to <5,1>  at depth 3 in 1
+Move X moves from <5,3> to <5,1>  at depth 4 in 5
+Move X moves from <5,3> to <5,1>  at depth 5 in 17
+Move X moves from <5,3> to <5,1>  at depth 6 in 45
+Move X moves from <5,3> to <5,1>  at depth 7 in 138
+Move X moves from <5,3> to <5,1>  at depth 8 in 294
+Move X moves from <4,4> to <2,4>  at depth 9 in 780
+Move X moves from <4,4> to <2,4>  at depth 10 in 1576
+Cutoff mid-depth 11
+X moves from <4,4> to <2,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	. . . X . X . . 
+3	X . . . . . . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+O moves from <1,6> to <3,6> 
+O moves from <1,6> to <3,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X . X O 
+2	. . . X . . . . 
+3	X . . . . O . O 
+4	. . . . . . . X 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 0
+Move X moves from <5,3> to <5,1>  at depth 3 in 1
+Move X moves from <5,3> to <5,1>  at depth 4 in 5
+Move X moves from <5,3> to <5,1>  at depth 5 in 14
+Move X moves from <5,3> to <5,1>  at depth 6 in 41
+Move X moves from <5,3> to <5,1>  at depth 7 in 103
+Move X moves from <5,3> to <5,1>  at depth 8 in 206
+Move X moves from <4,8> to <2,8>  at depth 9 in 369
+Move X moves from <4,8> to <2,8>  at depth 10 in 614
+Move X moves from <4,8> to <2,8>  at depth 11 in 855
+Move X moves from <4,8> to <2,8>  at depth 12 in 1155
+Move X moves from <4,8> to <2,8>  at depth 13 in 1441
+Move X moves from <4,8> to <2,8>  at depth 14 in 1734
+Move X moves from <4,8> to <2,8>  at depth 15 in 2038
+Move X moves from <4,8> to <2,8>  at depth 16 in 2349
+Move X moves from <4,8> to <2,8>  at depth 17 in 2661
+Explored whole move tree. Move X moves from <4,8> to <2,8>  at depth 18 in 2973
+X moves from <4,8> to <2,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X . X O 
+2	. . . X . . . X 
+3	X . . . . O . . 
+4	. . . . . . . . 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+O moves from <1,4> to <1,6> 
+O moves from <1,4> to <1,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X . . O X O 
+2	. . . X . . . X 
+3	X . . . . O . . 
+4	. . . . . . . . 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+Move X moves from <5,3> to <5,1>  at depth 2 in 0
+Move X moves from <5,3> to <5,1>  at depth 3 in 1
+Move X moves from <1,7> to <1,5>  at depth 4 in 4
+Move X moves from <1,7> to <1,5>  at depth 5 in 13
+Move X moves from <1,7> to <1,5>  at depth 6 in 27
+Move X moves from <1,7> to <1,5>  at depth 7 in 60
+Move X moves from <1,7> to <1,5>  at depth 8 in 110
+Move X moves from <1,7> to <1,5>  at depth 9 in 184
+Move X moves from <1,7> to <1,5>  at depth 10 in 288
+Move X moves from <1,7> to <1,5>  at depth 11 in 368
+Move X moves from <1,7> to <1,5>  at depth 12 in 450
+Move X moves from <1,7> to <1,5>  at depth 13 in 529
+Move X moves from <1,7> to <1,5>  at depth 14 in 606
+Move X moves from <1,7> to <1,5>  at depth 15 in 684
+Explored whole move tree. Move X moves from <1,7> to <1,5>  at depth 16 in 763
+X moves from <1,7> to <1,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X . X . . O 
+2	. . . X . . . X 
+3	X . . . . O . . 
+4	. . . . . . . . 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+O moves from <1,8> to <3,8> 
+O moves from <1,8> to <3,8> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X . X . . . 
+2	. . . X . . . . 
+3	X . . . . O . O 
+4	. . . . . . . . 
+5	. O X O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+Move X moves from <5,3> to <5,1>  at depth 2 in 0
+Move X moves from <5,3> to <5,1>  at depth 3 in 1
+Move X moves from <5,3> to <5,1>  at depth 4 in 3
+Move X moves from <5,3> to <5,1>  at depth 5 in 9
+Move X moves from <5,3> to <5,1>  at depth 6 in 17
+Move X moves from <5,3> to <5,1>  at depth 7 in 29
+Move X moves from <5,3> to <5,1>  at depth 8 in 49
+Move X moves from <5,3> to <5,1>  at depth 9 in 63
+Move X moves from <5,3> to <5,1>  at depth 10 in 77
+Move X moves from <5,3> to <5,1>  at depth 11 in 92
+Move X moves from <5,3> to <5,1>  at depth 12 in 106
+Move X moves from <5,3> to <5,1>  at depth 13 in 119
+Explored whole move tree. Move X moves from <5,3> to <5,1>  at depth 14 in 133
+X moves from <5,3> to <5,1> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X . X . . . 
+2	. . . X . . . . 
+3	X . . . . O . O 
+4	. . . . . . . . 
+5	X . . O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+O moves from <1,2> to <1,4> to <1,6> 
+O moves from <1,2> to <1,4> to <1,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O . . 
+2	. . . X . . . . 
+3	X . . . . O . O 
+4	. . . . . . . . 
+5	X . . O X O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+Move X moves from <5,5> to <5,3>  at depth 2 in 0
+Move X moves from <5,5> to <5,3>  at depth 3 in 1
+Move X moves from <5,5> to <5,3>  at depth 4 in 1
+Move X moves from <5,5> to <5,3>  at depth 5 in 4
+Move X moves from <5,5> to <5,3>  at depth 6 in 5
+Move X moves from <5,5> to <5,3>  at depth 7 in 6
+Explored whole move tree. Move X moves from <5,5> to <5,3>  at depth 8 in 7
+X moves from <5,5> to <5,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . . . . O . . 
+2	. . . X . . . . 
+3	X . . . . O . O 
+4	. . . . . . . . 
+5	X . X . . O X O 
+6	. . . . . X . X 
+7	. O . . . O . O 
+8	O . . X . . O . 
+
+X has won!
+[21, 20]
+[61776, 0]
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O X O . . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <4,2> to <4,4>  at depth 2 in 1
+Move X moves from <4,2> to <4,4>  at depth 3 in 2
+Move X moves from <4,2> to <4,4>  at depth 4 in 10
+Move X moves from <4,2> to <4,4>  at depth 5 in 34
+Move X moves from <4,2> to <4,4>  at depth 6 in 193
+Move X moves from <4,2> to <4,4>  at depth 7 in 617
+Move X moves from <4,2> to <4,4>  at depth 8 in 3161
+X moves from <4,2> to <4,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <6,5> to <4,5> 
+O moves from <6,5> to <4,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O X O X O 
+4	O . . X O X O X 
+5	X O X O . O X O 
+6	O X O X . X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+Move X moves from <3,5> to <5,5>  at depth 2 in 1
+Move X moves from <3,5> to <5,5>  at depth 3 in 5
+Move X moves from <3,5> to <5,5>  at depth 4 in 32
+Move X moves from <3,5> to <5,5>  at depth 5 in 121
+Move X moves from <3,5> to <5,5>  at depth 6 in 658
+Move X moves from <3,5> to <5,5>  at depth 7 in 2716
+Cutoff mid-depth 8
+X moves from <3,5> to <5,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X O X . X O X 
+7	X O X O X O X O 
+8	O X O X O X O X 
+
+O moves from <8,5> to <6,5> 
+O moves from <8,5> to <6,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O X O X O 
+6	O X O X O X O X 
+7	X O X O . O X O 
+8	O X O X . X O X 
+
+Move X moves from <5,5> to <7,5>  at depth 2 in 2
+Move X moves from <5,5> to <7,5>  at depth 3 in 10
+Move X moves from <5,5> to <7,5>  at depth 4 in 72
+Move X moves from <5,5> to <7,5>  at depth 5 in 324
+Move X moves from <5,5> to <7,5>  at depth 6 in 1627
+Cutoff mid-depth 7
+X moves from <5,5> to <7,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X . X O X 
+7	X O X O X O X O 
+8	O X O X . X O X 
+
+O moves from <8,3> to <8,5> 
+O moves from <8,3> to <8,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X . X O X 
+7	X O X O X O X O 
+8	O X . . O X O X 
+
+Move X moves from <8,6> to <8,4>  at depth 2 in 2
+Move X moves from <8,6> to <8,4>  at depth 3 in 15
+Move X moves from <8,6> to <8,4>  at depth 4 in 80
+Move X moves from <8,6> to <8,4>  at depth 5 in 322
+Move X moves from <8,6> to <8,4>  at depth 6 in 1691
+Cutoff mid-depth 7
+X moves from <8,6> to <8,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X . X O X 
+7	X O X O X O X O 
+8	O X . X . . O X 
+
+O moves from <8,1> to <8,3> to <8,5> 
+O moves from <8,1> to <8,3> to <8,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X . X O X 
+7	X O X O X O X O 
+8	. . . . O . O X 
+
+Move X moves from <6,4> to <8,4>  at depth 2 in 3
+Move X moves from <6,6> to <8,6>  at depth 3 in 20
+Move X moves from <6,6> to <8,6>  at depth 4 in 147
+Move X moves from <8,8> to <8,6>  at depth 5 in 913
+Cutoff mid-depth 6
+X moves from <8,8> to <8,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X . X O X 
+7	X O X O X O X O 
+8	. . . . O X . . 
+
+O moves from <6,7> to <8,7> 
+O moves from <6,7> to <8,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X . X . X 
+7	X O X O X O . O 
+8	. . . . O X O . 
+
+Move X moves from <8,6> to <8,4>  at depth 2 in 3
+Move X moves from <8,6> to <8,4>  at depth 3 in 19
+Move X moves from <8,6> to <8,4>  at depth 4 in 105
+Move X moves from <8,6> to <8,4>  at depth 5 in 562
+Move X moves from <8,6> to <8,4>  at depth 6 in 2856
+Cutoff mid-depth 7
+X moves from <8,6> to <8,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X . X O X 
+5	X O X O . O X O 
+6	O X O X . X . X 
+7	X O X O X O . O 
+8	. . . X . . O . 
+
+O moves from <4,7> to <4,5> 
+O moves from <4,7> to <4,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . X O . . X 
+5	X O X O . O X O 
+6	O X O X . X . X 
+7	X O X O X O . O 
+8	. . . X . . O . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 3
+Move X moves from <4,4> to <4,6>  at depth 3 in 29
+Move X moves from <6,8> to <8,8>  at depth 4 in 176
+Move X moves from <4,4> to <4,6>  at depth 5 in 1081
+Cutoff mid-depth 6
+X moves from <4,4> to <4,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . . . X . X 
+5	X O X O . O X O 
+6	O X O X . X . X 
+7	X O X O X O . O 
+8	. . . X . . O . 
+
+O moves from <6,3> to <8,3> 
+O moves from <6,3> to <8,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . . . X . X 
+5	X O X O . O X O 
+6	O X . X . X . X 
+7	X O . O X O . O 
+8	. . O X . . O . 
+
+Move X moves from <6,8> to <8,8>  at depth 2 in 3
+Move X moves from <6,8> to <8,8>  at depth 3 in 27
+Move X moves from <8,4> to <8,2>  at depth 4 in 174
+Move X moves from <6,8> to <8,8>  at depth 5 in 956
+Cutoff mid-depth 6
+X moves from <6,8> to <8,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X O X O X O X 
+3	X O X O . O X O 
+4	O . . . . X . X 
+5	X O X O . O X O 
+6	O X . X . X . . 
+7	X O . O X O . . 
+8	. . O X . . O X 
+
+O moves from <2,3> to <4,3> to <6,3> 
+O moves from <2,3> to <4,3> to <6,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O . O . O X O 
+4	O . . . . X . X 
+5	X O . O . O X O 
+6	O X O X . X . . 
+7	X O . O X O . . 
+8	. . O X . . O X 
+
+Move X moves from <8,4> to <8,2>  at depth 2 in 4
+Move X moves from <8,4> to <8,2>  at depth 3 in 32
+Move X moves from <6,2> to <8,2>  at depth 4 in 187
+Move X moves from <6,2> to <8,2>  at depth 5 in 1196
+Cutoff mid-depth 6
+X moves from <6,2> to <8,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O . O . O X O 
+4	O . . . . X . X 
+5	X O . O . O X O 
+6	O . O X . X . . 
+7	X . . O X O . . 
+8	. X O X . . O X 
+
+O moves from <6,3> to <6,5> 
+O moves from <6,3> to <6,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O . O . O X O 
+4	O . . . . X . X 
+5	X O . O . O X O 
+6	O . . . O X . . 
+7	X . . O X O . . 
+8	. X O X . . O X 
+
+Move X moves from <6,6> to <6,4>  at depth 2 in 4
+Move X moves from <6,6> to <6,4>  at depth 3 in 38
+Move X moves from <6,6> to <6,4>  at depth 4 in 201
+Move X moves from <6,6> to <6,4>  at depth 5 in 1176
+Cutoff mid-depth 6
+X moves from <6,6> to <6,4> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X O X 
+3	X O . O . O X O 
+4	O . . . . X . X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . . O X 
+
+O moves from <2,7> to <4,7> 
+O moves from <2,7> to <4,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O X O X O 
+2	O X . X O X . X 
+3	X O . O . O . O 
+4	O . . . . X O X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . . O X 
+
+Move X moves from <5,7> to <3,7>  at depth 2 in 5
+Move X moves from <1,5> to <3,5>  at depth 3 in 26
+Move X moves from <1,5> to <3,5>  at depth 4 in 126
+Move X moves from <1,5> to <3,5>  at depth 5 in 637
+Move X moves from <1,5> to <3,5>  at depth 6 in 2427
+Cutoff mid-depth 7
+X moves from <1,5> to <3,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O X . X . X . X 
+3	X O . O X O . O 
+4	O . . . . X O X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . . O X 
+
+O moves from <4,7> to <4,5> 
+O moves from <4,7> to <4,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O X . X . X . X 
+3	X O . O X O . O 
+4	O . . . O . . X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . . O X 
+
+Move X moves from <8,8> to <8,6>  at depth 2 in 4
+Move X moves from <8,8> to <8,6>  at depth 3 in 22
+Move X moves from <8,8> to <8,6>  at depth 4 in 128
+Move X moves from <3,5> to <5,5>  at depth 5 in 698
+Move X moves from <8,8> to <8,6>  at depth 6 in 2728
+Cutoff mid-depth 7
+X moves from <8,8> to <8,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O X . X . X . X 
+3	X O . O X O . O 
+4	O . . . O . . X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . X . . 
+
+O moves from <4,5> to <2,5> 
+O moves from <4,5> to <2,5> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O X O . O X O 
+2	O X . X O X . X 
+3	X O . O . O . O 
+4	O . . . . . . X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . X . . 
+
+Move X moves from <1,3> to <1,5>  at depth 2 in 3
+Move X moves from <1,3> to <1,5>  at depth 3 in 20
+Move X moves from <2,6> to <4,6>  at depth 4 in 97
+Move X moves from <1,3> to <1,5>  at depth 5 in 496
+Move X moves from <1,3> to <1,5>  at depth 6 in 1848
+Cutoff mid-depth 7
+X moves from <1,3> to <1,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O . . X O X O 
+2	O X . X O X . X 
+3	X O . O . O . O 
+4	O . . . . . . X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . X . . 
+
+O moves from <2,5> to <2,3> 
+O moves from <2,5> to <2,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O . . X O X O 
+2	O X O . . X . X 
+3	X O . O . O . O 
+4	O . . . . . . X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . X . . 
+
+Move X moves from <6,4> to <4,4>  at depth 2 in 2
+Move X moves from <2,2> to <2,4>  at depth 3 in 13
+Move X moves from <6,4> to <4,4>  at depth 4 in 53
+Move X moves from <2,2> to <2,4>  at depth 5 in 257
+Move X moves from <1,1> to <1,3>  at depth 6 in 1063
+Cutoff mid-depth 7
+X moves from <1,1> to <1,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . X . X O X O 
+2	O X O . . X . X 
+3	X O . O . O . O 
+4	O . . . . . . X 
+5	X O . O . O X O 
+6	O . . X . . . . 
+7	X . . O X O . . 
+8	. X O X . X . . 
+
+O moves from <6,1> to <8,1> 
+O moves from <6,1> to <8,1> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . X . X O X O 
+2	O X O . . X . X 
+3	X O . O . O . O 
+4	O . . . . . . X 
+5	X O . O . O X O 
+6	. . . X . . . . 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+Move X moves from <1,3> to <3,3>  at depth 2 in 2
+Move X moves from <1,3> to <3,3>  at depth 3 in 17
+Move X moves from <1,3> to <3,3>  at depth 4 in 87
+Move X moves from <2,2> to <4,2>  at depth 5 in 438
+Move X moves from <2,2> to <4,2>  at depth 6 in 1699
+Cutoff mid-depth 7
+X moves from <2,2> to <4,2> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . X . X O X O 
+2	O . O . . X . X 
+3	X . . O . O . O 
+4	O X . . . . . X 
+5	X O . O . O X O 
+6	. . . X . . . . 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+O moves from <1,6> to <1,4> 
+O moves from <1,6> to <1,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . X O . . X O 
+2	O . O . . X . X 
+3	X . . O . O . O 
+4	O X . . . . . X 
+5	X O . O . O X O 
+6	. . . X . . . . 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+Move X moves from <1,3> to <3,3>  at depth 2 in 2
+Move X moves from <1,3> to <3,3>  at depth 3 in 13
+Move X moves from <1,3> to <3,3>  at depth 4 in 70
+Move X moves from <1,3> to <3,3>  at depth 5 in 346
+Move X moves from <3,1> to <1,1>  at depth 6 in 1397
+Cutoff mid-depth 7
+X moves from <3,1> to <1,1> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X O . . X O 
+2	. . O . . X . X 
+3	. . . O . O . O 
+4	O X . . . . . X 
+5	X O . O . O X O 
+6	. . . X . . . . 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+O moves from <4,1> to <4,3> 
+O moves from <4,1> to <4,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X . X O . . X O 
+2	. . O . . X . X 
+3	. . . O . O . O 
+4	. . O . . . . X 
+5	X O . O . O X O 
+6	. . . X . . . . 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+Move X moves from <1,3> to <1,5>  at depth 2 in 1
+Move X moves from <7,5> to <7,3>  at depth 3 in 9
+Move X moves from <2,6> to <4,6>  at depth 4 in 38
+Move X moves from <2,6> to <4,6>  at depth 5 in 164
+Move X moves from <2,6> to <4,6>  at depth 6 in 523
+Move X moves from <2,6> to <4,6>  at depth 7 in 1910
+Cutoff mid-depth 8
+X moves from <2,6> to <4,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X . X O . . X O 
+2	. . O . . . . X 
+3	. . . O . . . O 
+4	. . O . . X . X 
+5	X O . O . O X O 
+6	. . . X . . . . 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+O moves from <1,4> to <1,2> 
+O moves from <1,4> to <1,2> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O . . . . X O 
+2	. . O . . . . X 
+3	. . . O . . . O 
+4	. . O . . X . X 
+5	X O . O . O X O 
+6	. . . X . . . . 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+Move X moves from <1,1> to <1,3>  at depth 2 in 1
+Move X moves from <1,1> to <1,3>  at depth 3 in 4
+Move X moves from <1,1> to <1,3>  at depth 4 in 13
+Move X moves from <1,1> to <1,3>  at depth 5 in 51
+Move X moves from <4,8> to <6,8>  at depth 6 in 175
+Move X moves from <1,1> to <1,3>  at depth 7 in 589
+Move X moves from <4,8> to <6,8>  at depth 8 in 1659
+Cutoff mid-depth 9
+X moves from <4,8> to <6,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O . . . . X O 
+2	. . O . . . . X 
+3	. . . O . . . O 
+4	. . O . . X . . 
+5	X O . O . O X . 
+6	. . . X . . . X 
+7	. . . O X O . . 
+8	O X O X . X . . 
+
+O moves from <8,3> to <8,5> to <8,7> 
+O moves from <8,3> to <8,5> to <8,7> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O . . . . X O 
+2	. . O . . . . X 
+3	. . . O . . . O 
+4	. . O . . X . . 
+5	X O . O . O X . 
+6	. . . X . . . X 
+7	. . . O X O . . 
+8	O X . . . . O . 
+
+Move X moves from <1,1> to <1,3>  at depth 2 in 0
+Move X moves from <4,6> to <6,6>  at depth 3 in 4
+Move X moves from <1,1> to <1,3>  at depth 4 in 11
+Move X moves from <1,1> to <1,3>  at depth 5 in 47
+Move X moves from <7,5> to <7,7>  at depth 6 in 118
+Move X moves from <6,4> to <4,4>  at depth 7 in 414
+Move X moves from <4,6> to <6,6> to <8,6>  at depth 8 in 901
+Move X moves from <4,6> to <6,6> to <8,6>  at depth 9 in 2611
+Cutoff mid-depth 10
+X moves from <4,6> to <6,6> to <8,6> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O . . . . X O 
+2	. . O . . . . X 
+3	. . . O . . . O 
+4	. . O . . . . . 
+5	X O . O . . X . 
+6	. . . X . . . X 
+7	. . . O X . . . 
+8	O X . . . X O . 
+
+O moves from <1,8> to <1,6> 
+O moves from <1,8> to <1,6> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O . . . O . . 
+2	. . O . . . . X 
+3	. . . O . . . O 
+4	. . O . . . . . 
+5	X O . O . . X . 
+6	. . . X . . . X 
+7	. . . O X . . . 
+8	O X . . . X O . 
+
+Move X moves from <1,1> to <1,3>  at depth 2 in 0
+Move X moves from <1,1> to <1,3>  at depth 3 in 4
+Move X moves from <1,1> to <1,3>  at depth 4 in 7
+Move X moves from <6,4> to <8,4>  at depth 5 in 16
+Move X moves from <6,4> to <8,4>  at depth 6 in 36
+Move X moves from <1,1> to <1,3>  at depth 7 in 85
+Move X moves from <1,1> to <1,3>  at depth 8 in 170
+Move X moves from <1,1> to <1,3>  at depth 9 in 311
+Move X moves from <1,1> to <1,3>  at depth 10 in 452
+Move X moves from <7,5> to <7,3>  at depth 11 in 567
+Move X moves from <7,5> to <7,3>  at depth 12 in 674
+Move X moves from <7,5> to <7,3>  at depth 13 in 781
+Explored whole move tree. Move X moves from <7,5> to <7,3>  at depth 14 in 891
+X moves from <7,5> to <7,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O . . . O . . 
+2	. . O . . . . X 
+3	. . . O . . . O 
+4	. . O . . . . . 
+5	X O . O . . X . 
+6	. . . X . . . X 
+7	. . X . . . . . 
+8	O X . . . X O . 
+
+O moves from <3,8> to <1,8> 
+O moves from <3,8> to <1,8> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O . . . O . O 
+2	. . O . . . . . 
+3	. . . O . . . . 
+4	. . O . . . . . 
+5	X O . O . . X . 
+6	. . . X . . . X 
+7	. . X . . . . . 
+8	O X . . . X O . 
+
+Move X moves from <1,1> to <1,3>  at depth 2 in 0
+Move X moves from <1,1> to <1,3>  at depth 3 in 0
+Move X moves from <8,6> to <8,8>  at depth 4 in 1
+Move X moves from <8,6> to <8,8>  at depth 5 in 4
+Move X moves from <8,6> to <8,8>  at depth 6 in 12
+Move X moves from <8,6> to <8,8>  at depth 7 in 25
+Move X moves from <8,6> to <8,8>  at depth 8 in 41
+Move X moves from <8,6> to <8,8>  at depth 9 in 57
+Move X moves from <8,6> to <8,8>  at depth 10 in 70
+Explored whole move tree. Move X moves from <8,6> to <8,8>  at depth 11 in 83
+X moves from <8,6> to <8,8> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	X O . . . O . O 
+2	. . O . . . . . 
+3	. . . O . . . . 
+4	. . O . . . . . 
+5	X O . O . . X . 
+6	. . . X . . . X 
+7	. . X . . . . . 
+8	O X . . . . . X 
+
+O moves from <5,4> to <7,4> 
+O moves from <5,4> to <7,4> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	X O . . . O . O 
+2	. . O . . . . . 
+3	. . . O . . . . 
+4	. . O . . . . . 
+5	X O . . . . X . 
+6	. . . . . . . X 
+7	. . X O . . . . 
+8	O X . . . . . X 
+
+Move X moves from <1,1> to <1,3>  at depth 2 in 0
+Move X moves from <7,3> to <7,5>  at depth 3 in 0
+Move X moves from <7,3> to <7,5>  at depth 4 in 0
+Move X moves from <1,1> to <1,3>  at depth 5 in 0
+Move X moves from <1,1> to <1,3>  at depth 6 in 1
+Move X moves from <1,1> to <1,3>  at depth 7 in 2
+Explored whole move tree. Move X moves from <1,1> to <1,3>  at depth 8 in 2
+X moves from <1,1> to <1,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . X . . O . O 
+2	. . O . . . . . 
+3	. . . O . . . . 
+4	. . O . . . . . 
+5	X O . . . . X . 
+6	. . . . . . . X 
+7	. . X O . . . . 
+8	O X . . . . . X 
+
+O moves from <8,1> to <8,3> 
+O moves from <8,1> to <8,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . X . . O . O 
+2	. . O . . . . . 
+3	. . . O . . . . 
+4	. . O . . . . . 
+5	X O . . . . X . 
+6	. . . . . . . X 
+7	. . X O . . . . 
+8	. . O . . . . X 
+
+Move X moves from <7,3> to <7,5>  at depth 2 in 0
+Move X moves from <1,3> to <3,3>  at depth 3 in 0
+Move X moves from <1,3> to <3,3>  at depth 4 in 1
+Move X moves from <1,3> to <3,3>  at depth 5 in 1
+Explored whole move tree. Move X moves from <1,3> to <3,3>  at depth 6 in 1
+X moves from <1,3> to <3,3> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . . . O . O 
+2	. . . . . . . . 
+3	. . X O . . . . 
+4	. . O . . . . . 
+5	X O . . . . X . 
+6	. . . . . . . X 
+7	. . X O . . . . 
+8	. . O . . . . X 
+
+O moves from <8,3> to <6,3> 
+O moves from <8,3> to <6,3> 
+Turn: X
+	1 2 3 4 5 6 7 8
+
+1	. . . . . O . O 
+2	. . . . . . . . 
+3	. . X O . . . . 
+4	. . O . . . . . 
+5	X O . . . . X . 
+6	. . O . . . . X 
+7	. . . O . . . . 
+8	. . . . . . . X 
+
+Move X moves from <3,3> to <3,5>  at depth 2 in 0
+Move X moves from <3,3> to <3,5>  at depth 3 in 0
+Explored whole move tree. Move X moves from <3,3> to <3,5>  at depth 4 in 0
+X moves from <3,3> to <3,5> 
+Turn: O
+	1 2 3 4 5 6 7 8
+
+1	. . . . . O . O 
+2	. . . . . . . . 
+3	. . . . X . . . 
+4	. . O . . . . . 
+5	X O . . . . X . 
+6	. . O . . . . X 
+7	. . . O . . . . 
+8	. . . . . . . X 
+
+X has won!
+[24, 23]
+[62179, 0]
+p1 won 1.0 of games
+p1 took avg 2.5955474
+p1 made avg 23.8 moves
+p2 won 0.0 of games
+p2 took avg 4.3478263E-5
+p2 made avg 22.8 moves
