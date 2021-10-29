@@ -153,6 +153,19 @@ class GameState{
 	//    (false in empty spaces)
 	public boolean[][][] pieceInfo(){
 		
+		// Make combined move list 
+		ArrayList<Move> moves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+		ArrayList<Move> enemyMoves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+
+		return pieceInfo(moves, enemyMoves);
+
+	}
+
+	// Duplicate that doesn't re-calculate moves 
+	public boolean[][][] pieceInfo(ArrayList<Move> _ourMoves, ArrayList<Move> _enemyMoves){
+		
 		boolean[][] endangered = new boolean[BOARD_SIZE][BOARD_SIZE];
 		boolean[][] movable = new boolean[BOARD_SIZE][BOARD_SIZE];
 
@@ -164,12 +177,12 @@ class GameState{
 		}
 
 		// Make combined move list 
-		ArrayList<Move> moves = getPossibleMoves();
-		turn = OPPOSITE_PLAYER[turn];
-		ArrayList<Move> enemyMoves = getPossibleMoves();
-		turn = OPPOSITE_PLAYER[turn];
-		for(int i=0; i<enemyMoves.size();i++){
-			moves.add(enemyMoves.get(i));
+		ArrayList<Move> moves = new ArrayList<Move>(64);
+		for(int i=0; i<_ourMoves.size(); i++){
+			moves.add(_ourMoves.get(i));
+		}
+		for(int i=0; i<_enemyMoves.size();i++){
+			moves.add(_enemyMoves.get(i));
 		}
 
 		for(int i=0; i<moves.size(); i++){
@@ -188,8 +201,6 @@ class GameState{
 		}
 
 		return new boolean[][][]{endangered, movable};
-
-
 	}
 
 	// Returns true if the move m can be made in the current gamestate 
@@ -364,6 +375,135 @@ class GameState{
 			int numOppositeMoves = getPossibleMoves().size();
 			turn = OPPOSITE_PLAYER[turn];
 			return numOppositeMoves;
+		}
+	}
+
+	// Returns an array containing the requested player's safe moves count in entry 0 and
+	// the other player's safe moves count in entry 1
+	public int[] numSafeMoves(int player){
+		
+		int[] safeMoveCount = new int[]{0,0};
+
+		// Get move lists
+		ArrayList<Move> moves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+		ArrayList<Move> enemyMoves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+
+		boolean[][][] pieceInfo = pieceInfo(moves, enemyMoves);
+		boolean[][] endangered = pieceInfo[0];
+		boolean[][] movable = pieceInfo[1];
+
+		// Increment safe move count[0] by 1 for each move we have 
+		// where start piece is not endangered and jumped over pieces cannot move
+		for(int i=0; i<moves.size(); i++){
+			Move m = moves.get(i);
+			if(endangered[m.startRow()][m.startCol()]){
+				continue;
+			}
+			ArrayList<int[]> jumpedOver = m.jumpedOver();
+			for(int j=0; j<jumpedOver.size(); j++){
+				if(movable[jumpedOver.get(j)[0]][jumpedOver.get(j)[1]]){
+					continue;
+				}
+			}
+			safeMoveCount[0]++;
+		}
+
+
+		// Increment safe move count[0] by 1 for each move we have 
+		// where start piece is not endangered and jumped over pieces cannot move
+		for(int i=0; i<enemyMoves.size(); i++){
+			Move m = enemyMoves.get(i);
+			if(endangered[m.startRow()][m.startCol()]){
+				continue;
+			}
+			ArrayList<int[]> jumpedOver = m.jumpedOver();
+			for(int j=0; j<jumpedOver.size(); j++){
+				if(movable[jumpedOver.get(j)[0]][jumpedOver.get(j)[1]]){
+					continue;
+				}
+			}
+			safeMoveCount[1]++;
+		}
+
+		if(turn == player){
+			return safeMoveCount;
+		} else {
+			return new int[]{safeMoveCount[1], safeMoveCount[0]};
+		}
+	}
+
+	// Returns an array containing the requested player's safe moves count in entry 0 and
+	// the other player's safe moves count in entry 1
+	public int[] numSafeSquares(int player){
+		
+		// Get move lists
+		ArrayList<Move> moves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+		ArrayList<Move> enemyMoves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+
+		boolean[][][] pieceInfo = pieceInfo(moves, enemyMoves);
+		boolean[][] endangered = pieceInfo[0];
+		boolean[][] movable = pieceInfo[1];
+
+		int[][] safeMoveAt = new int[BOARD_SIZE][BOARD_SIZE];
+		for(int i=0; i<BOARD_SIZE; i++){
+			for(int j=0; j<BOARD_SIZE; j++){
+				safeMoveAt[i][j] = EMPTY;
+			}
+		}
+
+		// Increment safe move count[0] by 1 for each move we have 
+		// where start piece is not endangered and jumped over pieces cannot move
+		for(int i=0; i<moves.size(); i++){
+			Move m = moves.get(i);
+			if(endangered[m.startRow()][m.startCol()]){
+				continue;
+			}
+			ArrayList<int[]> jumpedOver = m.jumpedOver();
+			for(int j=0; j<jumpedOver.size(); j++){
+				if(movable[jumpedOver.get(j)[0]][jumpedOver.get(j)[1]]){
+					continue;
+				}
+			}
+			safeMoveAt[m.startRow()][m.startCol()] = turn; 
+		}
+
+
+		// Increment safe move count[0] by 1 for each move we have 
+		// where start piece is not endangered and jumped over pieces cannot move
+		for(int i=0; i<enemyMoves.size(); i++){
+			Move m = enemyMoves.get(i);
+			if(endangered[m.startRow()][m.startCol()]){
+				continue;
+			}
+			ArrayList<int[]> jumpedOver = m.jumpedOver();
+			for(int j=0; j<jumpedOver.size(); j++){
+				if(movable[jumpedOver.get(j)[0]][jumpedOver.get(j)[1]]){
+					continue;
+				}
+			}
+			safeMoveAt[m.startRow()][m.startCol()] = OPPOSITE_PLAYER[turn]; 
+		}
+
+		int[] safeMoveCount = new int[]{0,0};
+		for(int i=0; i<BOARD_SIZE; i++){
+			for(int j=0; j<BOARD_SIZE; j++){
+				if(safeMoveAt[i][j] == turn){
+					safeMoveCount[0]++;
+				}
+				if(safeMoveAt[i][j] == OPPOSITE_PLAYER[turn]){
+					safeMoveCount[1]++; 
+				}
+			}
+		}
+
+		if(turn == player){
+			return safeMoveCount;
+		} else {
+			return new int[]{safeMoveCount[1], safeMoveCount[0]};
 		}
 	}
 

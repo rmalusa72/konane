@@ -16,11 +16,13 @@ public class ABMinimaxAgent implements Agent{
 	public static final int NUMPIECES = 0;
 	public static final int NUMMOVES = 1;
 	public static final int DIFFERENCEMOVES = 2; 
+	public static final int DSAFEMOVES = 3; 
+	public static final int DSAFESQUARES = 4; 
 
 	public ABMinimaxAgent(int _player, int _strategy, int _depthLimit){
 		player=_player;
 		depthLimit=_depthLimit;
-		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES))){
+		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy == DSAFEMOVES) || (_strategy == DSAFESQUARES))){
 			throw new IllegalArgumentException("Invalid strategy");
 		}
 		strategy = _strategy;
@@ -164,6 +166,12 @@ public class ABMinimaxAgent implements Agent{
 			return g.numMoves(player);
 		} else if(strategy == DIFFERENCEMOVES){
 			return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
+		} else if (strategy == DSAFEMOVES){
+			int[] safeMoves = g.numSafeMoves(player);
+			return safeMoves[0] - safeMoves[1];
+		} else if (strategy == DSAFESQUARES){
+			int[] safeMoves = g.numSafeSquares(player);
+			return safeMoves[0] - safeMoves[1];
 		}
 		return 0;
 	}

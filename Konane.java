@@ -40,6 +40,8 @@ class Konane{
 			}
 			if(printInfo){
 				System.out.println(g.printInfo());
+				System.out.println("Player 1 moves: " + Integer.toString(g.numMoves(GameState.PLAYER1)) + "/Player 2 moves: " + Integer.toString(g.numMoves(GameState.PLAYER2)));
+				System.out.println("Safe moves: " + Arrays.toString(g.numSafeMoves(GameState.PLAYER1)));
 			}
 
 			Agent currentPlayer = players[g.turn()];
@@ -103,9 +105,8 @@ class Konane{
 
 	public static void main(String[] args){
 		
-		randomGame();
+		//		randomGame();
 
-		/*
 		int p1Count = 0;
 		int p2Count = 0; 
 		float p1Avg = 0;
@@ -116,7 +117,7 @@ class Konane{
 		for(int i=0; i<numGames; i++){
 			//Konane s = new Konane(new IDABMinimaxAgent(GameState.PLAYER1, ABMinimaxAgent.DIFFERENCEMOVES, 10), new RandomAgent(GameState.PLAYER2), true);
 			//Konane s = new Konane(new IDABMinimaxAgent(GameState.PLAYER1, ABMinimaxAgent.DIFFERENCEMOVES, 5), new ABMinimaxAgent(GameState.PLAYER2, ABMinimaxAgent.DIFFERENCEMOVES, 6), true);
-			Konane s = new Konane(new RIDABMinimaxAgent(GameState.PLAYER1, RIDABMinimaxAgent.DIFFERENCEMOVES, 5), new RandomAgent(GameState.PLAYER2), true);
+			Konane s = new Konane(new IDABMinimaxAgent(GameState.PLAYER1, ABMinimaxAgent.DSAFESQUARES, 6), new ABMinimaxAgent(GameState.PLAYER2, ABMinimaxAgent.DIFFERENCEMOVES, 6), true);
 			if (s.winner()== GameState.PLAYER1){
 				p1Count++;
 			} else {
@@ -134,7 +135,6 @@ class Konane{
 		System.out.println("p2 won " + Float.toString(((float)p2Count)/numGames) + " of games");		
 		System.out.println("p2 took avg " + Float.toString(((float)p2Avg)/(numGames*1000)));
 		System.out.println("p2 made avg " + Float.toString((float)p2moves/(float)numGames) + " moves");
-		*/
 	}
 
 }
