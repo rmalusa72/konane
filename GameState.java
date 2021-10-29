@@ -146,6 +146,52 @@ class GameState{
 		return possibleMoves;  
 	}
 
+	// Given a list of moves derived from PossibleMoves, returns a pair of boolean arrays: 
+	// pieceInfo[0], endangered, is TRUE for pieces that can be jumped over, FALSE for pieces that cannot 
+	//    (false in empty spaces)
+	// pieceInfo[1], movable, is TRUE for pieces that have moves, FALSE for pieces that do not 
+	//    (false in empty spaces)
+	public boolean[][][] pieceInfo(){
+		
+		boolean[][] endangered = new boolean[BOARD_SIZE][BOARD_SIZE];
+		boolean[][] movable = new boolean[BOARD_SIZE][BOARD_SIZE];
+
+		for(int i=0; i<BOARD_SIZE; i++){
+			for(int j=0; j<BOARD_SIZE; j++){
+				endangered[i][j] = false;
+				movable[i][j] = false;
+			}
+		}
+
+		// Make combined move list 
+		ArrayList<Move> moves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+		ArrayList<Move> enemyMoves = getPossibleMoves();
+		turn = OPPOSITE_PLAYER[turn];
+		for(int i=0; i<enemyMoves.size();i++){
+			moves.add(enemyMoves.get(i));
+		}
+
+		for(int i=0; i<moves.size(); i++){
+			
+			Move m = moves.get(i);
+
+			// Set start of move to movable 
+			movable[m.startRow()][m.startCol()] = true;
+
+			// Set jumped-over pieces to endangered
+			ArrayList<int[]> jumpedOver = m.jumpedOver();
+			for(int j=0; j<jumpedOver.size(); j++){
+				endangered[jumpedOver.get(j)[0]][jumpedOver.get(j)[1]] = true;
+			}
+
+		}
+
+		return new boolean[][][]{endangered, movable};
+
+
+	}
+
 	// Returns true if the move m can be made in the current gamestate 
 	public boolean isValid(Move m){
 		// Player must match current turn
@@ -329,6 +375,41 @@ class GameState{
 			returnString += Integer.toString(i+1) + "\t";
 			for(int j=0; j<BOARD_SIZE; j++){
 				returnString += PLAYER_SYMBOL[board[i][j]] + " ";
+			}
+			returnString+="\n";
+		}
+		return returnString;
+	}
+
+	public String printInfo(){
+		String returnString = "";
+		boolean[][][] info = pieceInfo();
+		returnString += "Endangered\n";
+		returnString += "\t1 2 3 4 5 6 7 8\n\n";
+		for (int i=0; i<BOARD_SIZE; i++){
+			returnString += Integer.toString(i+1) + "\t";
+			for(int j=0; j<BOARD_SIZE; j++){
+				if(info[0][i][j]){
+					returnString +=  "1 ";
+				} else {
+					returnString +=  "0 ";
+				}
+				
+			}
+			returnString+="\n";
+		}
+
+		returnString += "Movable\n";
+		returnString += "\t1 2 3 4 5 6 7 8\n\n";
+		for (int i=0; i<BOARD_SIZE; i++){
+			returnString += Integer.toString(i+1) + "\t";
+			for(int j=0; j<BOARD_SIZE; j++){
+				if(info[1][i][j]){
+					returnString +=  "1 ";
+				} else {
+					returnString +=  "0 ";
+				}
+				
 			}
 			returnString+="\n";
 		}

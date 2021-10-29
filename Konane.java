@@ -9,6 +9,7 @@ class Konane{
 	Agent player2; 
 	Agent[] players;
 	public static final boolean printGames = true;
+	public static final boolean printInfo = true; 
 	public static final int numGames = 1;
 	int winner; 
 	long[] totalMoveTimes;
@@ -37,7 +38,9 @@ class Konane{
 			if(printGames){
 				System.out.println(g);	
 			}
-			
+			if(printInfo){
+				System.out.println(g.printInfo());
+			}
 
 			Agent currentPlayer = players[g.turn()];
 			long startTimeMillis = System.currentTimeMillis();
@@ -56,6 +59,9 @@ class Konane{
 
 		if(printGames){
 			System.out.println(g);
+		}
+		if(printInfo){
+			System.out.println(g.printInfo());
 		}
 		System.out.println(GameState.PLAYER_SYMBOL[g.winner()] + " has won!");
 		winner= g.winner(); 
@@ -97,6 +103,9 @@ class Konane{
 
 	public static void main(String[] args){
 		
+		randomGame();
+
+		/*
 		int p1Count = 0;
 		int p2Count = 0; 
 		float p1Avg = 0;
@@ -125,6 +134,7 @@ class Konane{
 		System.out.println("p2 won " + Float.toString(((float)p2Count)/numGames) + " of games");		
 		System.out.println("p2 took avg " + Float.toString(((float)p2Avg)/(numGames*1000)));
 		System.out.println("p2 made avg " + Float.toString((float)p2moves/(float)numGames) + " moves");
+		*/
 	}
 
 }
