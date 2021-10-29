@@ -9,7 +9,7 @@ class Konane{
 	Agent player2; 
 	Agent[] players;
 	public static final boolean printGames = true;
-	public static final int numGames = 5;
+	public static final int numGames = 1;
 	int winner; 
 	long[] totalMoveTimes;
 	int[] numMoves;
@@ -107,7 +107,7 @@ class Konane{
 		for(int i=0; i<numGames; i++){
 			//Konane s = new Konane(new IDABMinimaxAgent(GameState.PLAYER1, ABMinimaxAgent.DIFFERENCEMOVES, 10), new RandomAgent(GameState.PLAYER2), true);
 			//Konane s = new Konane(new IDABMinimaxAgent(GameState.PLAYER1, ABMinimaxAgent.DIFFERENCEMOVES, 5), new ABMinimaxAgent(GameState.PLAYER2, ABMinimaxAgent.DIFFERENCEMOVES, 6), true);
-			Konane s = new Konane(new ABMinimaxAgent(GameState.PLAYER1, ABMinimaxAgent.DIFFERENCEMOVES, 5), new RandomAgent(GameState.PLAYER2), true);
+			Konane s = new Konane(new RIDABMinimaxAgent(GameState.PLAYER1, RIDABMinimaxAgent.DIFFERENCEMOVES, 5), new RandomAgent(GameState.PLAYER2), true);
 			if (s.winner()== GameState.PLAYER1){
 				p1Count++;
 			} else {

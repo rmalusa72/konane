@@ -1,15 +1,16 @@
 // IDABMinimaxAgent.java
-// An agent that does an iteratively deepened ABminimax search to find its next move
+// An agent that does an iteratively deepened ABminimax search to find its next move, randomly ordering moves at first level
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 // POSSIBLE TODO LATER:
 // Save some information while searching 
 // Add cutoff value from minimax so we don't keep searching when all states are terminal
 // Compare times, performance to standard abminimax with depth 7 or 8 
 
-public class IDABMinimaxAgent implements Agent{
+public class RIDABMinimaxAgent implements Agent{
 	int player;
 	int strategy;
 	boolean idCutoff; 
@@ -21,7 +22,7 @@ public class IDABMinimaxAgent implements Agent{
 	public static final int SECPERMIL = 1000;
 	//public static final int TIMELIMIT = 5; 
 
-	public IDABMinimaxAgent(int _player, int _strategy, int _timeLimit){
+	public RIDABMinimaxAgent(int _player, int _strategy, int _timeLimit){
 		player=_player;
 		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES))){
 			throw new IllegalArgumentException("Invalid strategy");
@@ -44,6 +45,7 @@ public class IDABMinimaxAgent implements Agent{
 
 		// Generate possible successors 
 		ArrayList<Move> successors = g.getPossibleMoves();
+		Collections.shuffle(successors);
 		
 		int overallBestMoveValue = Integer.MIN_VALUE;
 		Move overallBestMove = null;
