@@ -582,10 +582,25 @@ class GameState{
 	}
 
 	// Return the provided player's evaluation of this gamestate 
+	// 2*the move difference + the number of safe moves they have 
 	public int complexScore1(int player){
 		ArrayList<Move> curMoves = getPossibleMoves();
 		ArrayList<Move> nextMoves = getPossibleOtherMoves();
 		int[] safeMoves = numSafeMoves(player, curMoves, nextMoves);
+
+		if(player == turn){
+			return 2*curMoves.size() - 2*nextMoves.size() + safeMoves[0];
+		} else {
+			return 2*nextMoves.size() - 2*curMoves.size() + safeMoves[0];
+		}
+	}
+
+	// Return the provided player's evaluation of this gamestate 
+	// 2*the move difference + the number of safe squares they have 
+	public int complexScore2(int player){
+		ArrayList<Move> curMoves = getPossibleMoves();
+		ArrayList<Move> nextMoves = getPossibleOtherMoves();
+		int[] safeMoves = numSafeSqures(player, curMoves, nextMoves);
 
 		if(player == turn){
 			return 2*curMoves.size() - 2*nextMoves.size() + safeMoves[0];

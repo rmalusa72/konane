@@ -123,7 +123,7 @@ class Konane{
 				humanVsRandom(true);
 			}
 		}
-		ABRABTesting(ABMinimaxAgent.DIFFERENCEMOVES, ABMinimaxAgent.DCOMPLEX1, 6, 2);
+		ABIDTesting(ABMinimaxAgent.DIFFERENCEMOVES, ABMinimaxAgent.DCOMPLEX1, 6, 5, 2);
 	}
 
 	// Run two games pitting ABMinimax with agent1strategy against agent2strategy:
@@ -238,6 +238,90 @@ class Konane{
 		System.out.println("p2 took avg " + Float.toString(((float)a2Time)/(2*rounds*1000)));
 
 	}
+
+
+	// Run two*rounds games pitting 
+	// agent 1: ABMinimax with agent1strategy and depth limit depth, against
+	// agent 2: IDABMinimax with agent2strategy and time limit time 
+	// half where a1 is x and one where a2 is x
+	public static void ABIDTesting(int agent1Strategy, int agent2Strategy, int depth, int timelimit, int rounds){
+		float a1Time = 0;
+		float a2Time = 0; 
+		float a1wins = 0; 
+		float a2wins = 0; 
+
+		for(int i=0; i<rounds; i++){
+
+			Konane s = new Konane(new ABMinimaxAgent(GameState.PLAYER1, agent1Strategy, depth), new IDABMinimaxAgent(GameState.PLAYER2, agent2Strategy, timelimit), true);
+			if (s.winner()== GameState.PLAYER1){
+				a1wins++;
+			} else {
+				a2wins++;
+			}
+
+			a1Time += s.averageTimePerMove(GameState.PLAYER1);
+			a2Time += s.averageTimePerMove(GameState.PLAYER2);
+
+			s = new Konane(new IDABMinimaxAgent(GameState.PLAYER1, agent2Strategy, timelimit), new ABMinimaxAgent(GameState.PLAYER2, agent1Strategy, depth), true);
+			if (s.winner()== GameState.PLAYER1){
+				a2wins++;
+			} else {
+				a1wins++;
+			}
+
+			a2Time += s.averageTimePerMove(GameState.PLAYER1);
+			a1Time += s.averageTimePerMove(GameState.PLAYER2);
+
+		}
+
+		System.out.println("a1 won " + Float.toString(((float)a1wins)/2*rounds) + " of games");
+		System.out.println("a1 took avg " + Float.toString(((float)a1Time)/(2*rounds*1000)));
+		System.out.println("a2 won " + Float.toString(((float)a2wins)/2*rounds) + " of games");		
+		System.out.println("p2 took avg " + Float.toString(((float)a2Time)/(2*rounds*1000)));
+
+	}
+
+	// Run two*rounds games pitting 
+	// agent 1: RABMinimax with agent1strategy and depth limit depth, against
+	// agent 2: IDABMinimax with agent2strategy and time limit time 
+	// half where a1 is x and one where a2 is x
+	public static void RABIDTesting(int agent1Strategy, int agent2Strategy, int depth, int timelimit, int rounds){
+		float a1Time = 0;
+		float a2Time = 0; 
+		float a1wins = 0; 
+		float a2wins = 0; 
+
+		for(int i=0; i<rounds; i++){
+
+			Konane s = new Konane(new RABMinimaxAgent(GameState.PLAYER1, agent1Strategy, depth), new IDABMinimaxAgent(GameState.PLAYER2, agent2Strategy, timelimit), true);
+			if (s.winner()== GameState.PLAYER1){
+				a1wins++;
+			} else {
+				a2wins++;
+			}
+
+			a1Time += s.averageTimePerMove(GameState.PLAYER1);
+			a2Time += s.averageTimePerMove(GameState.PLAYER2);
+
+			s = new Konane(new IDABMinimaxAgent(GameState.PLAYER1, agent2Strategy, timelimit), new RABMinimaxAgent(GameState.PLAYER2, agent1Strategy, depth), true);
+			if (s.winner()== GameState.PLAYER1){
+				a2wins++;
+			} else {
+				a1wins++;
+			}
+
+			a2Time += s.averageTimePerMove(GameState.PLAYER1);
+			a1Time += s.averageTimePerMove(GameState.PLAYER2);
+
+		}
+
+		System.out.println("a1 won " + Float.toString(((float)a1wins)/2*rounds) + " of games");
+		System.out.println("a1 took avg " + Float.toString(((float)a1Time)/(2*rounds*1000)));
+		System.out.println("a2 won " + Float.toString(((float)a2wins)/2*rounds) + " of games");		
+		System.out.println("p2 took avg " + Float.toString(((float)a2Time)/(2*rounds*1000)));
+
+	}
+
 
 
 }
