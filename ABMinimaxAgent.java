@@ -1,28 +1,23 @@
 // MinimaxAgent.java
-// An agent that does a depth-limited minimax search to find its next move
+// An agent that does a depth-limited minimax search with alpha-beta pruning to find its next move
 
 import java.util.ArrayList;
 import java.util.Random;
 
-// POSSIBLE TODO LATER:
-// Save some information while searching 
-// Evaluate performance against random agent
-// Iterative deepening 
-
 public class ABMinimaxAgent implements Agent{
-	int player;
-	int depthLimit;
-	int strategy;
+	protected int player;
+	protected int depthLimit;
+	protected int strategy;
 	public static final int NUMPIECES = 0;
 	public static final int NUMMOVES = 1;
 	public static final int DIFFERENCEMOVES = 2; 
-	public static final int DSAFEMOVES = 3; 
-	public static final int DSAFESQUARES = 4; 
+	public static final int DCOMPLEX1 = 3; 
+
 
 	public ABMinimaxAgent(int _player, int _strategy, int _depthLimit){
 		player=_player;
 		depthLimit=_depthLimit;
-		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy == DSAFEMOVES) || (_strategy == DSAFESQUARES))){
+		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy==DCOMPLEX1))){
 			throw new IllegalArgumentException("Invalid strategy");
 		}
 		strategy = _strategy;
@@ -56,7 +51,7 @@ public class ABMinimaxAgent implements Agent{
 		return bestMove;
 	}
 
-	private int maxValue(GameState g, int depth, int depthLimit, int alpha, int beta){
+	protected int maxValue(GameState g, int depth, int depthLimit, int alpha, int beta){
 		
 		// Depth/terminal cutoff 
 		if(g.isTerminal() || depth == depthLimit){
@@ -83,7 +78,7 @@ public class ABMinimaxAgent implements Agent{
 		return alpha; 
 	}
 
-	private int minValue(GameState g, int depth, int depthLimit, int alpha, int beta){
+	protected int minValue(GameState g, int depth, int depthLimit, int alpha, int beta){
 		// Depth/terminal cutoff 
 		if(g.isTerminal() || depth == depthLimit){
 			return e(g);
@@ -109,49 +104,8 @@ public class ABMinimaxAgent implements Agent{
 		return beta; 
 	}
 
-
-	private int minimaxRecursive(GameState g, int depth, int depthLimit){
-		
-		// If we have reached the depth limit or a terminal state, return evaluation value
-		if(g.isTerminal() || depth == depthLimit){
-			return e(g);
-		}
-
-		// Otherwise, recurse
-		if(isMax(g)){
-			int maxMoveValue = Integer.MIN_VALUE;
-
-			ArrayList<Move> successors = g.getPossibleMoves();
-			for(int i=0; i<successors.size(); i++){
-				GameState result = g.applyMove(successors.get(i));
-				//Apply minimax to each to determine expected value 
-				int value = minimaxRecursive(result, depth+1, depthLimit);
-
-				if(value > maxMoveValue){
-					maxMoveValue = value;
-				}				
-			}
-			return maxMoveValue; 
-
-		} else {
-			int minMoveValue = Integer.MAX_VALUE;
-
-			ArrayList<Move> successors = g.getPossibleMoves();
-			for(int i=0; i<successors.size(); i++){
-				GameState result = g.applyMove(successors.get(i));
-				//Apply minimax to each to determine expected value 
-				int value = minimaxRecursive(result, depth+1, depthLimit);
-
-				if(value < minMoveValue){
-					minMoveValue = value;
-				}				
-			}
-			return minMoveValue; 
-		}
-	}
-
 	// Static evaluation function 
-	private int e(GameState g){
+	protected int e(GameState g){
 		if(g.isTerminal()){
 			if(g.winner() == player){
 				return Integer.MAX_VALUE-1;
@@ -166,21 +120,17 @@ public class ABMinimaxAgent implements Agent{
 			return g.numMoves(player);
 		} else if(strategy == DIFFERENCEMOVES){
 			return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
-		} else if (strategy == DSAFEMOVES){
-			int[] safeMoves = g.numSafeMoves(player);
-			return safeMoves[0] - safeMoves[1];
-		} else if (strategy == DSAFESQUARES){
-			int[] safeMoves = g.numSafeSquares(player);
-			return safeMoves[0] - safeMoves[1];
+		} else if (strategy==DCOMPLEX1){
+			return g.complexScore1(player);
 		}
 		return 0;
 	}
 
-	private boolean isMax(GameState g){
+	protected boolean isMax(GameState g){
 		return g.turn() == player;
 	}
 
-	private class SearchNode{
+	protected class SearchNode{
 		
 		SearchNode parent;
 		Move lastAction;

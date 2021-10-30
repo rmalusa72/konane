@@ -4,31 +4,15 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-// POSSIBLE TODO LATER:
-// Save some information while searching 
-// Add cutoff value from minimax so we don't keep searching when all states are terminal
-// Compare times, performance to standard abminimax with depth 7 or 8 
+public class IDABMinimaxAgent extends ABMinimaxAgent implements Agent{
 
-public class IDABMinimaxAgent implements Agent{
-	int player;
-	int strategy;
 	boolean idCutoff; 
 	int timeLimit;
 
-	public static final int NUMPIECES = 0;
-	public static final int NUMMOVES = 1;
-	public static final int DIFFERENCEMOVES = 2; 
-	public static final int DSAFEMOVES = 3; 
-	public static final int DSAFESQUARES = 4; 
 	public static final int SECPERMIL = 1000;
-	//public static final int TIMELIMIT = 5; 
 
 	public IDABMinimaxAgent(int _player, int _strategy, int _timeLimit){
-		player=_player;
-		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy == DSAFEMOVES) || (_strategy == DSAFESQUARES))){
-			throw new IllegalArgumentException("Invalid strategy");
-		}
-		strategy = _strategy;
+		super(_player, _strategy, 0);
 		idCutoff = false;
 		timeLimit = _timeLimit;
 
@@ -40,7 +24,7 @@ public class IDABMinimaxAgent implements Agent{
 
 
 	// Find and return minimax-recommended move 
-	private Move getMove(GameState g, Move lastMove, int timeInSeconds){
+	protected Move getMove(GameState g, Move lastMove, int timeInSeconds){
 		
 		long startTimeMillis = System.currentTimeMillis();
 
@@ -106,7 +90,7 @@ public class IDABMinimaxAgent implements Agent{
 		return overallBestMove;
 	}
 
-	private int maxValue(GameState g, int depth, int depthLimit, int alpha, int beta){
+	protected int maxValue(GameState g, int depth, int depthLimit, int alpha, int beta){
 		
 		// Depth/terminal cutoff 
 		if(g.isTerminal()){
@@ -137,7 +121,7 @@ public class IDABMinimaxAgent implements Agent{
 		return alpha; 
 	}
 
-	private int minValue(GameState g, int depth, int depthLimit, int alpha, int beta){
+	protected int minValue(GameState g, int depth, int depthLimit, int alpha, int beta){
 		// Depth/terminal cutoff 
 		if(g.isTerminal()){
 			return e(g);
@@ -165,91 +149,5 @@ public class IDABMinimaxAgent implements Agent{
 			}
 		}
 		return beta; 
-	}
-
-
-	private int minimaxRecursive(GameState g, int depth, int depthLimit){
-		
-		// If we have reached the depth limit or a terminal state, return evaluation value
-		if(g.isTerminal() || depth == depthLimit){
-			return e(g);
-		}
-
-		// Otherwise, recurse
-		if(isMax(g)){
-			int maxMoveValue = Integer.MIN_VALUE;
-
-			ArrayList<Move> successors = g.getPossibleMoves();
-			for(int i=0; i<successors.size(); i++){
-				GameState result = g.applyMove(successors.get(i));
-				//Apply minimax to each to determine expected value 
-				int value = minimaxRecursive(result, depth+1, depthLimit);
-
-				if(value > maxMoveValue){
-					maxMoveValue = value;
-				}				
-			}
-			return maxMoveValue; 
-
-		} else {
-			int minMoveValue = Integer.MAX_VALUE;
-
-			ArrayList<Move> successors = g.getPossibleMoves();
-			for(int i=0; i<successors.size(); i++){
-				GameState result = g.applyMove(successors.get(i));
-				//Apply minimax to each to determine expected value 
-				int value = minimaxRecursive(result, depth+1, depthLimit);
-
-				if(value < minMoveValue){
-					minMoveValue = value;
-				}				
-			}
-			return minMoveValue; 
-		}
-	}
-
-	// Static evaluation function 
-	private int e(GameState g){
-		if(g.isTerminal()){
-			if(g.winner() == player){
-				return Integer.MAX_VALUE-1;
-			} else {
-				return Integer.MIN_VALUE+1;
-			}
-		}
-
-		if(strategy == NUMPIECES){
-			return g.numPieces(player);
-		} else if(strategy == NUMMOVES){
-			return g.numMoves(player);
-		} else if(strategy == DIFFERENCEMOVES){
-			return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
-		} else if (strategy == DSAFEMOVES){
-			int[] safeMoves = g.numSafeMoves(player);
-			return safeMoves[0] - safeMoves[1];
-		} else if (strategy == DSAFESQUARES){
-			int[] safeMoves = g.numSafeSquares(player);
-			return safeMoves[0] - safeMoves[1];
-		}
-		return 0;
-	}
-
-	private boolean isMax(GameState g){
-		return g.turn() == player;
-	}
-
-	private class SearchNode{
-		
-		SearchNode parent;
-		Move lastAction;
-		GameState g; 
-		int depth; 
-		
-		SearchNode(GameState _g, SearchNode _p, Move _l, int _d){
-			parent = _p;
-			lastAction = _l;
-			g = _g; 
-			depth = _d;
-		}
 	}
 }
