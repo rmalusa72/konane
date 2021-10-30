@@ -114,18 +114,6 @@ class Konane{
 		
 	}
 
-	public static void main(String[] args){
-		// No args to run normal random game with computer playing x 
-		if(args.length == 1){
-			if(args[1].equals("o")){
-				humanVsRandom(false);
-			} else {
-				humanVsRandom(true);
-			}
-		}
-		ABIDTesting(ABMinimaxAgent.DIFFERENCEMOVES, ABMinimaxAgent.DCOMPLEX1, 6, 5, 2);
-	}
-
 	// Run two games pitting ABMinimax with agent1strategy against agent2strategy:
 	// one where a1 is x and one where a2 is x
 	public static void ABTesting(int agent1Strategy, int agent2Strategy, int depth){
@@ -322,6 +310,16 @@ class Konane{
 
 	}
 
-
+	public static void main(String[] args){
+		// No args to run normal random game with computer playing x 
+		if(args.length == 1){
+			if(args[1].equals("o")){
+				humanVsRandom(false);
+			} else {
+				humanVsRandom(true);
+			}
+		}
+		ABTesting(ABMinimaxAgent.DCOMPLEX1, ABMinimaxAgent.DCOMPLEX2, 6);
+	}
 
 }

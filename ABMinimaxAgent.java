@@ -12,12 +12,13 @@ public class ABMinimaxAgent implements Agent{
 	public static final int NUMMOVES = 1;
 	public static final int DIFFERENCEMOVES = 2; 
 	public static final int DCOMPLEX1 = 3; 
+	public static final int DCOMPLEX2 = 4; 
 
 
 	public ABMinimaxAgent(int _player, int _strategy, int _depthLimit){
 		player=_player;
 		depthLimit=_depthLimit;
-		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy==DCOMPLEX1))){
+		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy==DCOMPLEX1) || (_strategy == DCOMPLEX2))){
 			throw new IllegalArgumentException("Invalid strategy");
 		}
 		strategy = _strategy;
@@ -122,6 +123,8 @@ public class ABMinimaxAgent implements Agent{
 			return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
 		} else if (strategy==DCOMPLEX1){
 			return g.complexScore1(player);
+		} else if(strategy==DCOMPLEX2){
+			return g.complexScore2(player);
 		}
 		return 0;
 	}

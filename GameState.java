@@ -600,7 +600,7 @@ class GameState{
 	public int complexScore2(int player){
 		ArrayList<Move> curMoves = getPossibleMoves();
 		ArrayList<Move> nextMoves = getPossibleOtherMoves();
-		int[] safeMoves = numSafeSqures(player, curMoves, nextMoves);
+		int[] safeMoves = numSafeSquares(player, curMoves, nextMoves);
 
 		if(player == turn){
 			return 2*curMoves.size() - 2*nextMoves.size() + safeMoves[0];
