@@ -27,12 +27,12 @@ public class RABMinimaxAgent extends ABMinimaxAgent implements Agent{
 			Move move = successors.get(i);
 			//System.out.println(move);
 			GameState result = g.applyMove(move);
-			System.out.println(result);
+			//System.out.println(result);
 			//System.out.println(result.turn());
-			System.out.println(result.numMoves(player));
-			System.out.println(result.numMoves(GameState.OPPOSITE_PLAYER[player]));
-			System.out.println(Arrays.toString(result.numSafeMoves(player)));
-			System.out.println(result.complexScore1(player));
+			//System.out.println(result.numMoves(player));
+			//System.out.println(result.numMoves(GameState.OPPOSITE_PLAYER[player]));
+			//System.out.println(Arrays.toString(result.numSafeMoves(player)));
+			//System.out.println(result.complexScore1(player));
 
 			//Apply minimax to each to determine expected value 
 			int value = minValue(result, 1, depthLimit, Integer.MIN_VALUE, Integer.MAX_VALUE);
