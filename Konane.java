@@ -319,7 +319,7 @@ class Konane{
 				humanVsRandom(true);
 			}
 		}
-		ABTesting(ABMinimaxAgent.DCOMPLEX1, ABMinimaxAgent.DCOMPLEX2, 6);
+		ABRABTesting(ABMinimaxAgent.DIFFERENCEMOVES, ABMinimaxAgent.DCOMPLEX2, 6, 2);
 	}
 
 }

@@ -609,6 +609,21 @@ class GameState{
 		}
 	}
 
+	// Return the provided player's evaluation of this gamestate 
+	// 2*the move difference + the number of safe squares they have 
+	// But uses safeSquares2, which is simpler and faster to compute 
+	public int complexScore3(int player){
+		ArrayList<Move> curMoves = getPossibleMoves();
+		ArrayList<Move> nextMoves = getPossibleOtherMoves();
+		int[] safeMoves = numSafeSquares2(player, curMoves, nextMoves);
+
+		if(player == turn){
+			return 2*curMoves.size() - 2*nextMoves.size() + safeMoves[0];
+		} else {
+			return 2*nextMoves.size() - 2*curMoves.size() + safeMoves[0];
+		}
+	}
+
 	// Generates a string representation of the board
 	public String displayBoard(){
 		String returnString = "\t1 2 3 4 5 6 7 8\n\n";
