@@ -4,10 +4,6 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-// POSSIBLE TODO LATER:
-// Save some information while searching 
-// Evaluate performance against random agent
-
 public class MinimaxAgent implements Agent{
 	int player;
 	int depthLimit;
@@ -28,9 +24,7 @@ public class MinimaxAgent implements Agent{
 		for(int i=0; i<successors.size(); i++){
 			// Get gamestate resulting from each 
 			Move move = successors.get(i);
-			System.out.println(move);
 			GameState result = g.applyMove(move);
-			System.out.println(result);
 
 			//Apply minimax to each to determine expected value 
 			int value = minimaxRecursive(result, 1, depthLimit);
@@ -88,14 +82,12 @@ public class MinimaxAgent implements Agent{
 	private int e(GameState g){
 		if(g.isTerminal()){
 			if(g.winner() == player){
-				return Integer.MAX_VALUE;
+				return Integer.MAX_VALUE-1;
 			} else {
-				return Integer.MIN_VALUE;
+				return Integer.MIN_VALUE+1;
 			}
 		}
 
-		//return g.numPieces(player);
-		//return g.numMoves(player);
 		return g.numMoves(player) - g.numMoves(GameState.OPPOSITE_PLAYER[player]);
 	}
 
@@ -103,18 +95,4 @@ public class MinimaxAgent implements Agent{
 		return g.turn() == player;
 	}
 
-	private class SearchNode{
-		
-		SearchNode parent;
-		Move lastAction;
-		GameState g; 
-		int depth; 
-		
-		SearchNode(GameState _g, SearchNode _p, Move _l, int _d){
-			parent = _p;
-			lastAction = _l;
-			g = _g; 
-			depth = _d;
-		}
-	}
 }

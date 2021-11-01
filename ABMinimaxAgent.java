@@ -14,12 +14,14 @@ public class ABMinimaxAgent implements Agent{
 	public static final int DCOMPLEX1 = 3; 
 	public static final int DCOMPLEX2 = 4; 
 	public static final int DCOMPLEX3 = 5;
-
+	public static final int DCOMPLEX4 = 6;
+	public static final int DCOMPLEX5 = 7; 
+	public static final int DCOMPLEX6 = 8;
 
 	public ABMinimaxAgent(int _player, int _strategy, int _depthLimit){
 		player=_player;
 		depthLimit=_depthLimit;
-		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy==DCOMPLEX1) || (_strategy == DCOMPLEX2) || (_strategy == DCOMPLEX3))){
+		if (!((_strategy == NUMPIECES) || (_strategy == NUMMOVES) || (_strategy == DIFFERENCEMOVES)|| (_strategy==DCOMPLEX1) || (_strategy == DCOMPLEX2) || (_strategy == DCOMPLEX3) || (_strategy == DCOMPLEX4) || (_strategy == DCOMPLEX5) || (_strategy==DCOMPLEX6))){
 			throw new IllegalArgumentException("Invalid strategy");
 		}
 		strategy = _strategy;
@@ -128,6 +130,16 @@ public class ABMinimaxAgent implements Agent{
 			return g.complexScore2(player);
 		} else if(strategy==DCOMPLEX3){
 			return g.complexScore3(player);
+		} else if(strategy==DCOMPLEX4){
+			return g.complexScore4(player);
+		} else if(strategy==DCOMPLEX5){
+			return g.complexScore5(player);
+		} else if(strategy==DCOMPLEX6){
+			if(player==GameState.PLAYER1){
+				return g.complexScore2(player);
+			}else{
+				return g.complexScore3(player);
+			}
 		}
 		return 0;
 	}
@@ -136,18 +148,4 @@ public class ABMinimaxAgent implements Agent{
 		return g.turn() == player;
 	}
 
-	protected class SearchNode{
-		
-		SearchNode parent;
-		Move lastAction;
-		GameState g; 
-		int depth; 
-		
-		SearchNode(GameState _g, SearchNode _p, Move _l, int _d){
-			parent = _p;
-			lastAction = _l;
-			g = _g; 
-			depth = _d;
-		}
-	}
 }

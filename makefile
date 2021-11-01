@@ -14,7 +14,7 @@ CLASSES = \
 		MinimaxAgent.java \
 		ABMinimaxAgent.java \
 		IDABMinimaxAgent.java \
-		RIDABMinimaxAgent.java \
+		RABIDMinimaxAgent.java \
 		RABMinimaxAgent.java
 
 default: classes

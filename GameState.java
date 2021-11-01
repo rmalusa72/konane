@@ -624,6 +624,34 @@ class GameState{
 		}
 	}
 
+	// Return the provided player's evaluation of this gamestate 
+	// 3*the move difference + 2*the number of safe squares they have 
+	public int complexScore4(int player){
+		ArrayList<Move> curMoves = getPossibleMoves();
+		ArrayList<Move> nextMoves = getPossibleOtherMoves();
+		int[] safeMoves = numSafeSquares(player, curMoves, nextMoves);
+
+		if(player == turn){
+			return 3*curMoves.size() - 3*nextMoves.size() + 2*safeMoves[0];
+		} else {
+			return 3*nextMoves.size() - 3*curMoves.size() + 2*safeMoves[0];
+		}
+	}	
+
+	// Return the provided player's evaluation of this gamestate 
+	// 3*the move difference + 1*the number of safe squares they have 
+	public int complexScore5(int player){
+		ArrayList<Move> curMoves = getPossibleMoves();
+		ArrayList<Move> nextMoves = getPossibleOtherMoves();
+		int[] safeMoves = numSafeSquares(player, curMoves, nextMoves);
+
+		if(player == turn){
+			return 3*curMoves.size() - 3*nextMoves.size() + 1*safeMoves[0];
+		} else {
+			return 3*nextMoves.size() - 3*curMoves.size() + 1*safeMoves[0];
+		}
+	}	
+
 	// Generates a string representation of the board
 	public String displayBoard(){
 		String returnString = "\t1 2 3 4 5 6 7 8\n\n";
@@ -680,6 +708,7 @@ class GameState{
 		return returnString;
 	}
 
+	// Testing
 	public static void main(String[] args){
 		
 		GameState g = new GameState();
@@ -689,7 +718,6 @@ class GameState{
 		while (!currentState.isTerminal()){
 			System.out.println(currentState.getPossibleMoves());
 			currentState.applyMoveInPlace(currentState.getPossibleMoves().get(0));
-			//currentState = currentState.applyMove(currentState.getPossibleMoves().get(0));
 			System.out.println(currentState.toString());
 		}
 		System.out.println("Winner: " + PLAYER_SYMBOL[currentState.winner()]);
